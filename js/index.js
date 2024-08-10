@@ -88,23 +88,30 @@ const swiper2 = new Swiper(".blog__swiper", {
     spaceBetween: 20,
 
     speed: 1500,
-    //   breakpoints: {
-    //     // when window width is >= 320px
-    //     320: {
-    //       slidesPerView: 2,
-    //       spaceBetween: 20
-    //     },
-    //     // when window width is >= 480px
-    //     480: {
-    //       slidesPerView: 3,
-    //       spaceBetween: 30
-    //     },
-    //     // when window width is >= 640px
-    //     640: {
-    //       slidesPerView: 4,
-    //       spaceBetween: 40
-    //     }
-    //   }
+    breakpoints: {
+
+        320: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: 20,
+        },
+        450: {
+            slidesPerView: 1.3,
+            slidesPerGroup: 1,
+            spaceBetween: 20,
+        },
+        560: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 20,
+        },
+        960: {
+            slidesPerView: 3,
+            slidesPerGroup: 3,
+            spaceBetween: 20,
+        },
+
+    }
 });
 
 // swiper review
@@ -127,23 +134,25 @@ const swiper3 = new Swiper(".review__swiper", {
     spaceBetween: 20,
 
     speed: 1500,
-    //   breakpoints: {
-    //     // when window width is >= 320px
-    //     320: {
-    //       slidesPerView: 2,
-    //       spaceBetween: 20
-    //     },
-    //     // when window width is >= 480px
-    //     480: {
-    //       slidesPerView: 3,
-    //       spaceBetween: 30
-    //     },
-    //     // when window width is >= 640px
-    //     640: {
-    //       slidesPerView: 4,
-    //       spaceBetween: 40
-    //     }
-    //   }
+    breakpoints: {
+
+        320: {
+            slidesPerView: 1,
+            slidesPerGroup: 1,
+            spaceBetween: 20,
+        },
+        650: {
+            slidesPerView: 1.5,
+            slidesPerGroup: 1,
+            spaceBetween: 20,
+        },
+        920: {
+            slidesPerView: 2,
+            slidesPerGroup: 2,
+            spaceBetween: 20,
+        },
+
+    }
 });
 
 // validation form 
@@ -306,5 +315,27 @@ document.addEventListener('DOMContentLoaded', function () {
     function closeSearch() {
         searchContainer.classList.remove('active');
         overlay.classList.remove('active');
+    }
+});
+
+// burger 
+document.addEventListener('DOMContentLoaded', () => {
+    const burgerIcon = document.querySelector('.burger__icon');
+    const burgerMenu = document.querySelector('.burger__menu');
+
+    if (burgerIcon && burgerMenu) {
+        burgerIcon.addEventListener('click', () => {
+            burgerIcon.classList.toggle('active');
+            burgerMenu.classList.toggle('active');
+            document.body.style.overflow = burgerMenu.classList.contains('active') ? 'hidden' : '';
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!burgerMenu.contains(event.target) && !burgerIcon.contains(event.target)) {
+                burgerIcon.classList.remove('active');
+                burgerMenu.classList.remove('active');
+                document.body.style.overflow = '';
+            }
+        });
     }
 });
