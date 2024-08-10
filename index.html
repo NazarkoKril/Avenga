@@ -12,89 +12,42 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Prompt:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
+    <link rel="icon" href="data:," type="image/x-icon">
     <!-- swiper -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <!-- intel tel input -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css">
     <title>Avenga</title>
 </head>
-<header>
-    <div class="container">
-        <div class="header__container">
-            <div class="h__left">
-                <a href="./index.html"><img loading="lazy" src="./img/logo.png" alt="logo photo"></a>
-                <span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 18 18" fill="none">
-                        <g clip-path="url(#clip0_12_841)">
-                            <path
-                                d="M17.8295 17.0207L13.1821 12.4477C14.3991 11.1255 15.1469 9.37682 15.1469 7.45261C15.1463 3.33639 11.7559 0 7.57327 0C3.39066 0 0.000244141 3.33639 0.000244141 7.45261C0.000244141 11.5688 3.39066 14.9052 7.57327 14.9052C9.38045 14.9052 11.0379 14.2801 12.3399 13.241L17.0052 17.832C17.2326 18.056 17.6016 18.056 17.8289 17.832C18.0568 17.6081 18.0568 17.2447 17.8295 17.0207ZM7.57327 13.7586C4.03433 13.7586 1.16546 10.9353 1.16546 7.45261C1.16546 3.96991 4.03433 1.14663 7.57327 1.14663C11.1122 1.14663 13.9811 3.96991 13.9811 7.45261C13.9811 10.9353 11.1122 13.7586 7.57327 13.7586Z"
-                                fill="#1E1E1E" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_12_841">
-                                <rect width="18" height="18" fill="white" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                </span>
-            </div>
-            <div class="nav__header">
-                <nav class="h__center">
-                    <ul class="header__list">
-                        <li class="header__item">
-                            <a href="./index.html" class="header__link">Home</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="./index.html" class="header__link">Industries</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="./index.html" class="header__link">Services</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="./index.html" class="header__link">Technologies</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="./index.html" class="header__link">Success</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="./index.html" class="header__link">About</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="./index.html" class="header__link">Insights</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="./index.html" class="header__link">Career</a>
-                        </li>
-                        <li class="header__item">
-                            <a href="./index.html" class="header__link">Contact us</a>
-                        </li>
 
-                    </ul>
-                </nav>
-                <div class="h__right">
-                    <div class="language-dropdown">
-                        <span class="language-dropdown__toggle" id="languageToggle">
-                            Global (EN)
-                            <svg class="language-dropdown__icon" xmlns="http://www.w3.org/2000/svg" width="12"
-                                height="12" viewBox="0 0 12 12" fill="none">
+<body>
+    <header>
+        <div class="container">
+            <div class="header__container">
+                <div class="h__left">
+                    <a href="./index.html"><img loading="lazy" src="./img/logo.png" alt="logo photo"></a>
+                    <span id="search-icon" style="cursor: pointer;">
+                        <svg style="cursor: pointer;" xmlns="http://www.w3.org/2000/svg" width="18" height="18"
+                            viewBox="0 0 18 18" fill="none">
+                            <g clip-path="url(#clip0_12_841)">
                                 <path
-                                    d="M6 9.42016C5.78493 9.42016 5.5699 9.33805 5.40593 9.17416L0.2462 4.01438C-0.082026 3.68615 -0.082026 3.15399 0.2462 2.82589C0.574293 2.4978 1.10635 2.4978 1.4346 2.82589L6 7.39156L10.5654 2.82605C10.8936 2.49796 11.4256 2.49796 11.7537 2.82605C12.0821 3.15415 12.0821 3.68631 11.7537 4.01454L6.59407 9.17432C6.43002 9.33823 6.21498 9.42016 6 9.42016Z"
+                                    d="M17.8295 17.0207L13.1821 12.4477C14.3991 11.1255 15.1469 9.37682 15.1469 7.45261C15.1463 3.33639 11.7559 0 7.57327 0C3.39066 0 0.000244141 3.33639 0.000244141 7.45261C0.000244141 11.5688 3.39066 14.9052 7.57327 14.9052C9.38045 14.9052 11.0379 14.2801 12.3399 13.241L17.0052 17.832C17.2326 18.056 17.6016 18.056 17.8289 17.832C18.0568 17.6081 18.0568 17.2447 17.8295 17.0207ZM7.57327 13.7586C4.03433 13.7586 1.16546 10.9353 1.16546 7.45261C1.16546 3.96991 4.03433 1.14663 7.57327 1.14663C11.1122 1.14663 13.9811 3.96991 13.9811 7.45261C13.9811 10.9353 11.1122 13.7586 7.57327 13.7586Z"
                                     fill="#1E1E1E" />
-                            </svg>
-                        </span>
-                        <div class="language-dropdown__menu">
-                            <a href="#" class="language-dropdown__item header__link">Global (EN)</a>
-                            <a href="#" class="language-dropdown__item header__link">Polska (PL)</a>
-                        </div>
-                    </div>
+                            </g>
+                            <defs>
+                                <clipPath id="clip0_12_841">
+                                    <rect width="18" height="18" fill="white" />
+                                </clipPath>
+                            </defs>
+                        </svg>
+                    </span>
                 </div>
-            </div>
-            <div class="burger">
-                <div class="burger__icon">
-                    <div class="line1"></div>
-                    <div class="line2"></div>
-                    <div class="line3"></div>
+                <div id="search-container" class="search-container">
+                    <input type="text" placeholder="Search..." class="search-input" />
                 </div>
-                <div class="burger__menu">
-                    <div class="container">
+                <div id="overlay" class="overlay_half"></div>
+                <div class="nav__header">
+                    <nav class="h__center">
                         <ul class="header__list">
                             <li class="header__item">
                                 <a href="./index.html" class="header__link">Home</a>
@@ -123,1166 +76,1265 @@
                             <li class="header__item">
                                 <a href="./index.html" class="header__link">Contact us</a>
                             </li>
+
                         </ul>
+                    </nav>
+                    <div class="h__right">
+                        <div class="language-dropdown">
+                            <span class="language-dropdown__toggle" id="languageToggle">
+                                Global (EN)
+                                <svg class="language-dropdown__icon" xmlns="http://www.w3.org/2000/svg" width="12"
+                                    height="12" viewBox="0 0 12 12" fill="none">
+                                    <path
+                                        d="M6 9.42016C5.78493 9.42016 5.5699 9.33805 5.40593 9.17416L0.2462 4.01438C-0.082026 3.68615 -0.082026 3.15399 0.2462 2.82589C0.574293 2.4978 1.10635 2.4978 1.4346 2.82589L6 7.39156L10.5654 2.82605C10.8936 2.49796 11.4256 2.49796 11.7537 2.82605C12.0821 3.15415 12.0821 3.68631 11.7537 4.01454L6.59407 9.17432C6.43002 9.33823 6.21498 9.42016 6 9.42016Z"
+                                        fill="#1E1E1E" />
+                                </svg>
+                            </span>
+                            <div class="language-dropdown__menu">
+                                <a href="#" class="language-dropdown__item header__link">Global (EN)</a>
+                                <a href="#" class="language-dropdown__item header__link">Polska (PL)</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="burger">
+                    <div class="burger__icon">
+                        <div class="line1"></div>
+                        <div class="line2"></div>
+                        <div class="line3"></div>
+                    </div>
+                    <div class="burger__menu">
+                        <div class="container">
+                            <ul class="header__list">
+                                <li class="header__item">
+                                    <a href="./index.html" class="header__link">Home</a>
+                                </li>
+                                <li class="header__item">
+                                    <a href="./index.html" class="header__link">Industries</a>
+                                </li>
+                                <li class="header__item">
+                                    <a href="./index.html" class="header__link">Services</a>
+                                </li>
+                                <li class="header__item">
+                                    <a href="./index.html" class="header__link">Technologies</a>
+                                </li>
+                                <li class="header__item">
+                                    <a href="./index.html" class="header__link">Success</a>
+                                </li>
+                                <li class="header__item">
+                                    <a href="./index.html" class="header__link">About</a>
+                                </li>
+                                <li class="header__item">
+                                    <a href="./index.html" class="header__link">Insights</a>
+                                </li>
+                                <li class="header__item">
+                                    <a href="./index.html" class="header__link">Career</a>
+                                </li>
+                                <li class="header__item">
+                                    <a href="./index.html" class="header__link">Contact us</a>
+                                </li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>
-</header>
-<main>
-    <section class="hero__section">
-        <div class="container">
-            <div class="nav__page">
-                <a href="index.html">Service offerings</a>
-                <span>/</span>
-                <a href="index.html" class="nav__page_active">Technology consulting services</a>
+    </header>
+    <main>
+        <section class="hero__section">
+            <div class="container">
+                <div class="nav__page">
+                    <a href="index.html">Service offerings</a>
+                    <span>/</span>
+                    <a href="index.html" class="nav__page_active">Technology consulting services</a>
+                </div>
+                <div class="hero__container">
+                    <div class="hero__left">
+                        <h1 class="hero__left_title">Technology Consulting
+                            Services</h1>
+                        <p class="hero__left_subtitle">Avenga delivers in-depth technology consulting that supports
+                            organizations through every stage of their digital journey.
+                            From ideation and validation to design, engineering, testing, deployment, and ongoing
+                            maintenance, we accelerate digital
+                            transformation by leveraging cutting-edge analytics and artificial intelligence.</p>
+                        <a href="index.html">
+                            <span>Get in touch</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                fill="none">
+                                <g clip-path="url(#clip0_15_918)">
+                                    <path
+                                        d="M13.0979 0H2.51865C2.021 0 1.61631 0.404688 1.61631 0.902344C1.61631 1.4 2.021 1.80469 2.51865 1.80469H10.9159L0.265527 12.4578C-0.087207 12.8105 -0.087207 13.382 0.265527 13.7348C0.618262 14.0875 1.18975 14.0875 1.54248 13.7348L12.1929 3.08164V11.4789C12.1929 11.9766 12.5976 12.3813 13.0952 12.3813C13.5929 12.3813 13.9976 11.9766 13.9976 11.4789V0.902344C14.0003 0.404688 13.5956 0 13.0979 0Z"
+                                        fill="white" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_15_918">
+                                        <rect width="14" height="14" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                    </div>
+                    <div class="hero__rigth">
+                        <img src="./img/hero-img.png" alt="photo" loading="lazy">
+                    </div>
+
+                </div>
             </div>
-            <div class="hero__container">
-                <div class="hero__left">
-                    <h1 class="hero__left_title">Technology Consulting
-                        Services</h1>
-                    <p class="hero__left_subtitle">Avenga delivers in-depth technology consulting that supports
-                        organizations through every stage of their digital journey.
-                        From ideation and validation to design, engineering, testing, deployment, and ongoing
-                        maintenance, we accelerate digital
-                        transformation by leveraging cutting-edge analytics and artificial intelligence.</p>
-                    <a href="index.html">
-                        <span>Get in touch</span>
+        </section>
+        <section class="company__section">
+            <div class="container">
+                <ul class="company__list">
+                    <li class="company__item">
+                        <img src="./img/company1.png" alt="logo company" loading="lazy">
+                    </li>
+                    <li class="company__item">
+                        <img src="./img/company2.png" alt="logo company" loading="lazy">
+                    </li>
+                    <li class="company__item">
+                        <img src="./img/company3.png" alt="logo company" loading="lazy">
+                    </li>
+                    <li class="company__item">
+                        <img src="./img/company4.png" alt="logo company" loading="lazy">
+                    </li>
+                    <li class="company__item">
+                        <img src="./img/company5.png" alt="logo company" loading="lazy">
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="section__service">
+            <div class="container">
+                <ul class="service__list">
+                    <li class="service__item">
+                        <img src="./img/service1.png" alt="photo" loading="lazy">
+                        <span>Financial services & banking</span>
+                        <h3>Bespoke Cloud Architecture Design</h3>
+                        <p>Innovative cloud solutions that transform the case management experience for teams.</p>
+                        <a href="#">
+                            <span class="header__link">Read more</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                                fill="none">
+                                <g clip-path="url(#clip0_20_962)">
+                                    <path
+                                        d="M11.227 0H2.15898C1.73242 0 1.38555 0.346875 1.38555 0.773438C1.38555 1.2 1.73242 1.54688 2.15898 1.54688H9.35664L0.227734 10.6781C-0.0746094 10.9805 -0.0746094 11.4703 0.227734 11.7727C0.530078 12.075 1.01992 12.075 1.32227 11.7727L10.4512 2.64141V9.83906C10.4512 10.2656 10.798 10.6125 11.2246 10.6125C11.6512 10.6125 11.998 10.2656 11.998 9.83906V0.773438C12.0004 0.346875 11.6535 0 11.227 0Z"
+                                        fill="#5646CC" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_20_962">
+                                        <rect width="12" height="12" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="service__item">
+                        <img src="./img/service2.png" alt="photo" loading="lazy">
+                        <span>ML & Al</span>
+                        <h3>Al assistant for increased productivity in the workplace</h3>
+                        <p>Collaborating on a custom UMA platform enables a business to evolve a traditional workspace
+                            into
+                            a smart, collaborative
+                            environment.</p>
+                        <a href="#">
+                            <span class="header__link">Read more</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                                fill="none">
+                                <g clip-path="url(#clip0_20_962)">
+                                    <path
+                                        d="M11.227 0H2.15898C1.73242 0 1.38555 0.346875 1.38555 0.773438C1.38555 1.2 1.73242 1.54688 2.15898 1.54688H9.35664L0.227734 10.6781C-0.0746094 10.9805 -0.0746094 11.4703 0.227734 11.7727C0.530078 12.075 1.01992 12.075 1.32227 11.7727L10.4512 2.64141V9.83906C10.4512 10.2656 10.798 10.6125 11.2246 10.6125C11.6512 10.6125 11.998 10.2656 11.998 9.83906V0.773438C12.0004 0.346875 11.6535 0 11.227 0Z"
+                                        fill="#5646CC" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_20_962">
+                                        <rect width="12" height="12" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="service__item">
+                        <img src="./img/service1.png" alt="photo" loading="lazy">
+                        <span>Technology</span>
+                        <h3>Intuitive SaaS purchasing management platform</h3>
+                        <p>Transforming the purchasing experience by making the buying process as automated and
+                            streamlined
+                            as possible.</p>
+                        <a href="#">
+                            <span class="header__link">Read more</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                                fill="none">
+                                <g clip-path="url(#clip0_20_962)">
+                                    <path
+                                        d="M11.227 0H2.15898C1.73242 0 1.38555 0.346875 1.38555 0.773438C1.38555 1.2 1.73242 1.54688 2.15898 1.54688H9.35664L0.227734 10.6781C-0.0746094 10.9805 -0.0746094 11.4703 0.227734 11.7727C0.530078 12.075 1.01992 12.075 1.32227 11.7727L10.4512 2.64141V9.83906C10.4512 10.2656 10.798 10.6125 11.2246 10.6125C11.6512 10.6125 11.998 10.2656 11.998 9.83906V0.773438C12.0004 0.346875 11.6535 0 11.227 0Z"
+                                        fill="#5646CC" />
+                                </g>
+                                <defs>
+                                    <clipPath id="clip0_20_962">
+                                        <rect width="12" height="12" fill="white" />
+                                    </clipPath>
+                                </defs>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="section__howwework">
+            <div class="container">
+                <h2 class="howwework__title"> How we work</h2>
+                <p class="howwework__subtitle">We merge top-tier service delivery standards with unparalleled levels of
+                    solution customization.</p>
+                <div class="howwework__list">
+                    <div class="howwework__item">
+                        <span>1 step</span>
+                        <h3>Contact Us</h3>
+                        <p>Reach out via email or schedule a meeting. We'll reply within two hours to set up a
+                            convenient
+                            appointment.</p>
+                    </div>
+                    <div class="howwework__step step1">
+                        <p>1 working day</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="245" height="32" viewBox="0 0 245 32"
+                            fill="none">
+                            <rect width="2" height="30" fill="#5646CC" />
+                            <rect y="32" width="2" height="245" transform="rotate(-90 0 32)" fill="#5646CC" />
+                            <rect x="243" width="2" height="30" fill="#5646CC" />
+                        </svg>
+                    </div>
+                    <div class="howwework__item">
+                        <span>2 step</span>
+                        <h3>Consult with Our Specialist</h3>
+                        <p>A market expert tailored to your industry will connect to discuss your needs and outline the
+                            next steps.</p>
+                    </div>
+                    <div class="howwework__step step2">
+                        <p>up to 7 working days</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="245" height="32" viewBox="0 0 245 32"
+                            fill="none">
+                            <rect width="2" height="30" fill="#5646CC" />
+                            <rect y="32" width="2" height="245" transform="rotate(-90 0 32)" fill="#5646CC" />
+                            <rect x="243" width="2" height="30" fill="#5646CC" />
+                        </svg>
+                    </div>
+                    <div class="howwework__item">
+                        <span>3 step</span>
+                        <h3>Review Our Proposal</h3>
+                        <p>Receive a detailed service proposal with timelines and cost estimates for each phase of your
+                            project.</p>
+                    </div>
+                    <div class="howwework__item">
+                        <span>4 step</span>
+                        <h3>Finalize the Agreement</h3>
+                        <p>Once you sign the contract, we’ll begin work and keep you informed of our progress.</p>
+                    </div>
+                    <div class="howwework__step step3">
+
+                        <p>7+ working days</p>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="245" height="32" viewBox="0 0 245 32"
+                            fill="none">
+                            <rect width="2" height="30" fill="#5646CC" />
+                            <rect y="32" width="2" height="245" transform="rotate(-90 0 32)" fill="#5646CC" />
+                            <rect x="243" width="2" height="30" fill="#5646CC" />
+                        </svg>
+
+                    </div>
+                </div>
+            </div>
+            <img class="howwework__back" src="./img/howwework_back.png" alt="photo">
+        </section>
+        <section class="whatwedo__section">
+            <div class="container">
+                <div class="whatwedo__container">
+                    <div class="whatwedo_left">
+                        <h2 class="whatwedo__title">What We Do</h2>
+                        <p class="whatwedo__subtitle">Avenga specializes in comprehensive IT transformation services,
+                            driving significant cost-efficiency through effective
+                            technology implementation.</p>
+                        <div class="swiper whatwedo__swiper">
+                            <div class="swiper-wrapper whatwedo__wrapper">
+                                <div class="swiper-slide whatwedo__slide">
+                                    <h3 class="whatwedo__slide_title">Technology Solution Discovery</h3>
+                                    <p class="whatwedo__slide_subtitle">Transform your business idea into a
+                                        well-executed
+                                        project. After thorough analysis and validation of your concept, we
+                                        will identify a tailored technology suite that aligns with your business
+                                        objectives.
+                                        From the start, we ensure
+                                        cost-efficiency, exceptional quality, and technical excellence.</p>
+                                </div>
+                                <div class="swiper-slide whatwedo__slide">
+                                    <h3 class="whatwedo__slide_title">Solution audit</h3>
+                                    <p class="whatwedo__slide_subtitle">An underperforming solution is more of a
+                                        liability
+                                        than an asset. Discover what's hindering your software with our
+                                        solution audit services. Our experts will thoroughly evaluate your system and
+                                        provide a detailed report of issues
+                                        affecting its performance.</p>
+                                </div>
+                                <div class="swiper-slide whatwedo__slide">
+                                    <h3 class="whatwedo__slide_title">Modernization discovery</h3>
+                                    <p class="whatwedo__slide_subtitle">Staying competitive requires moving beyond
+                                        legacy
+                                        platforms. We'll thoroughly analyze your current system to identify
+                                        areas for improvement and modernization. Additionally, we'll offer
+                                        recommendations
+                                        for implementing these changes
+                                        efficiently and with minimal disruption to your business.</p>
+                                </div>
+                                <div class="swiper-slide whatwedo__slide">
+                                    <h3 class="whatwedo__slide_title">Migration discovery</h3>
+                                    <p class="whatwedo__slide_subtitle">An outdated infrastructure can hold back your
+                                        business performance. Upgrade to a modern, secure environment with our
+                                        consulting services. Avenga's experts will evaluate your app’s readiness for
+                                        migration and create a detailed plan to
+                                        ensure a smooth, predictable transition with minimal downtime.</p>
+                                </div>
+                                <div class="swiper-slide whatwedo__slide">
+                                    <h3 class="whatwedo__slide_title">Capability enablement</h3>
+                                    <p class="whatwedo__slide_subtitle">If your delivery system is missing certain
+                                        essential
+                                        components, we can seamlessly and efficiently integrate them into
+                                        your ecosystem. Avenga helps companies provide the solutions their clients need
+                                        by
+                                        ensuring smooth operation throughout
+                                        the entire software development lifecycle.</p>
+                                </div>
+                            </div>
+                            <div class="swiper__pagination">
+                                <div class="swiper-pagination"></div>
+                                <div class="swiper-button-prev custom-arrow"></div>
+                                <div class="swiper-button-next custom-arrow"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="whatwedo_rigth">
+                        <img src="./img/whatwedo_img.png" alt="photo" loading="lazy">
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="offers__section">
+            <div class="container">
+                <h2 class="offers__title">Opting for Avenga offers:</h2>
+                <p class="offers__subtitle">Avenga specializes in comprehensive IT transformation services, driving
+                    significant cost-efficiency through effective
+                    technology implementation.</p>
+                <ul class="offers__list">
+                    <li class="offers__item">
+                        <span>01</span>
+                        <h3>Boosted Performance</h3>
+                        <p>Achieve significant improvements in operational efficiency by gaining comprehensive insights
+                            into
+                            your assets and
+                            conditions.</p>
+                    </li>
+                    <li class="offers__item">
+                        <span>02</span>
+                        <h3>Proactive Maintenance</h3>
+                        <p>Utilize operational data to foresee potential issues and maintain stability across your
+                            operations.</p>
+                    </li>
+                    <li class="offers__item">
+                        <span>03</span>
+                        <h3>Enhanced Flexibility</h3>
+                        <p>Leverage real-time IoT data to develop new services like dynamic scheduling and routing,
+                            tailored
+                            to your needs.</p>
+                    </li>
+                    <li class="offers__item">
+                        <span>04</span>
+                        <h3>Process Refinement</h3>
+                        <p>Utilize real-time reporting to streamline processes and resolve operational inefficiencies.
+                        </p>
+                    </li>
+                    <li class="offers__item">
+                        <span>05</span>
+                        <h3>Innovative Business Models</h3>
+                        <p>Extract valuable insights from sensor data to uncover new opportunities and create modern,
+                            actionable business models.</p>
+                    </li>
+                    <li class="offers__item">
+                        <span>06</span>
+                        <h3>Forward-Thinking Solutions</h3>
+                        <p>Develop cutting-edge, connected products and deliver more personalized, engaging experiences
+                            for
+                            your clients.</p>
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="techno__service">
+            <div class="container">
+                <h2 class="techno__title">Technologies</h2>
+                <div class="techno__container">
+                    <ul class="techno__list">
+                        <li class="techno__tab techno__tab--active" data-tab="cloud">Cloud</li>
+                        <li class="techno__tab" data-tab="automation">Automation</li>
+                        <li class="techno__tab" data-tab="data-ai">Data and AI</li>
+                        <li class="techno__tab" data-tab="salesforce">Salesforce</li>
+                        <li class="techno__tab" data-tab="microsoft">Microsoft</li>
+                        <li class="techno__tab" data-tab="blockchain">Blockchain</li>
+                    </ul>
+                    <div class="techno__content active" id="cloud">
+                        <div class="techno__content_left">
+                            <p>Our team of certified AWS, Google Cloud, and Azure professionals is prepared to provide
+                                expert consulting, migration,
+                                and engineering services. Avenga delivers a comprehensive range of cloud solutions
+                                designed
+                                to enhance speed,
+                                reliability, and security for your needs.</p>
+                            <a href="#">
+                                <span>Explore</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_22_1349)">
+                                        <path
+                                            d="M13.0979 0H2.51865C2.021 0 1.61631 0.404688 1.61631 0.902344C1.61631 1.4 2.021 1.80469 2.51865 1.80469H10.9159L0.265527 12.4578C-0.087207 12.8105 -0.087207 13.382 0.265527 13.7348C0.618262 14.0875 1.18975 14.0875 1.54248 13.7348L12.1929 3.08164V11.4789C12.1929 11.9766 12.5976 12.3813 13.0952 12.3813C13.5929 12.3813 13.9976 11.9766 13.9976 11.4789V0.902344C14.0003 0.404688 13.5956 0 13.0979 0Z"
+                                            fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_22_1349">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="techno__content_right">
+                            <div class="techno__block">
+                                <span>35 %</span>
+                                <p>Total cost of
+                                    ownership savings</p>
+                            </div>
+                            <div class="techno__block">
+                                <span>1 trillion</span>
+                                <p>Cloud computing market
+                                    value by 2028</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="techno__content" id="automation">
+                        <div class="techno__content_left">
+                            <p>Fortify your products and services against business disruptions. Gain a competitive edge
+                                by
+                                automating delivery
+                                pipelines, testing, and manual processes to scale opportunities and mitigate risks
+                                seamlessly.</p>
+                            <a href="#">
+                                <span>Explore</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_22_1349)">
+                                        <path
+                                            d="M13.0979 0H2.51865C2.021 0 1.61631 0.404688 1.61631 0.902344C1.61631 1.4 2.021 1.80469 2.51865 1.80469H10.9159L0.265527 12.4578C-0.087207 12.8105 -0.087207 13.382 0.265527 13.7348C0.618262 14.0875 1.18975 14.0875 1.54248 13.7348L12.1929 3.08164V11.4789C12.1929 11.9766 12.5976 12.3813 13.0952 12.3813C13.5929 12.3813 13.9976 11.9766 13.9976 11.4789V0.902344C14.0003 0.404688 13.5956 0 13.0979 0Z"
+                                            fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_22_1349">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="techno__content_right">
+                            <div class="techno__block">
+                                <span>33 %</span>
+                                <p>More time to
+                                    improve infrastructure</p>
+                            </div>
+                            <div class="techno__block">
+                                <span>60 %</span>
+                                <p>Less time for handling
+                                    support cases</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="techno__content" id="data-ai">
+                        <div class="techno__content_left">
+                            <p>Harness the power of data to enhance decision-making, boost business agility, and enable
+                                accurate planning. Avenga
+                                supports businesses globally in collecting, processing, visualizing, and utilizing data
+                                to
+                                drive success.</p>
+                            <a href="#">
+                                <span>Explore</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_22_1349)">
+                                        <path
+                                            d="M13.0979 0H2.51865C2.021 0 1.61631 0.404688 1.61631 0.902344C1.61631 1.4 2.021 1.80469 2.51865 1.80469H10.9159L0.265527 12.4578C-0.087207 12.8105 -0.087207 13.382 0.265527 13.7348C0.618262 14.0875 1.18975 14.0875 1.54248 13.7348L12.1929 3.08164V11.4789C12.1929 11.9766 12.5976 12.3813 13.0952 12.3813C13.5929 12.3813 13.9976 11.9766 13.9976 11.4789V0.902344C14.0003 0.404688 13.5956 0 13.0979 0Z"
+                                            fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_22_1349">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="techno__content_right">
+                            <div class="techno__block">
+                                <span>95 %</span>
+                                <p>Businesses suffer from
+                                    unstructured data</p>
+                            </div>
+                            <div class="techno__block">
+                                <span>82 %</span>
+                                <p>AI usage in risk
+                                    management cases</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="techno__content" id="salesforce">
+                        <div class="techno__content_left">
+                            <p>Cultivate customer loyalty by delivering a unique buyer’s journey that sets you apart
+                                from
+                                competitors. As a certified
+                                Salesforce partner, Avenga offers bespoke Salesforce solutions to optimize sales and
+                                customer engagement.</p>
+                            <a href="#">
+                                <span>Explore</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_22_1349)">
+                                        <path
+                                            d="M13.0979 0H2.51865C2.021 0 1.61631 0.404688 1.61631 0.902344C1.61631 1.4 2.021 1.80469 2.51865 1.80469H10.9159L0.265527 12.4578C-0.087207 12.8105 -0.087207 13.382 0.265527 13.7348C0.618262 14.0875 1.18975 14.0875 1.54248 13.7348L12.1929 3.08164V11.4789C12.1929 11.9766 12.5976 12.3813 13.0952 12.3813C13.5929 12.3813 13.9976 11.9766 13.9976 11.4789V0.902344C14.0003 0.404688 13.5956 0 13.0979 0Z"
+                                            fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_22_1349">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="techno__content_right">
+                            <div class="techno__block">
+                                <span>52 %</span>
+                                <p>Increase of leads
+                                    volume</p>
+                            </div>
+                            <div class="techno__block">
+                                <span>33 %</span>
+                                <p>CRM users
+                                    worldwide</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="techno__content" id="microsoft">
+                        <div class="techno__content_left">
+                            <p>Optimize team productivity, coherence, and collaboration with Avenga’s tailored Microsoft
+                                solutions. Leverage Microsoft
+                                365, SharePoint Intranet, and Power Platform to ensure efficient goal-oriented
+                                cooperation
+                                across your organization.</p>
+                            <a href="#">
+                                <span>Explore</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_22_1349)">
+                                        <path
+                                            d="M13.0979 0H2.51865C2.021 0 1.61631 0.404688 1.61631 0.902344C1.61631 1.4 2.021 1.80469 2.51865 1.80469H10.9159L0.265527 12.4578C-0.087207 12.8105 -0.087207 13.382 0.265527 13.7348C0.618262 14.0875 1.18975 14.0875 1.54248 13.7348L12.1929 3.08164V11.4789C12.1929 11.9766 12.5976 12.3813 13.0952 12.3813C13.5929 12.3813 13.9976 11.9766 13.9976 11.4789V0.902344C14.0003 0.404688 13.5956 0 13.0979 0Z"
+                                            fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_22_1349">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="techno__content_right">
+                            <div class="techno__block">
+                                <span>91 %</span>
+                                <p>Used by Fortune
+                                    100 companies</p>
+                            </div>
+                            <div class="techno__block">
+                                <span>79 %</span>
+                                <p>Healthcare organizations
+                                    adopted Microsoft</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="techno__content" id="blockchain">
+                        <div class="techno__content_left">
+                            <p>Explore advanced digital security with blockchain technology. Our skilled blockchain
+                                developers at Avenga build
+                                decentralized solutions and applications to enhance transaction traceability and data
+                                security.</p>
+                            <a href="#">
+                                <span>Explore</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
+                                    fill="none">
+                                    <g clip-path="url(#clip0_22_1349)">
+                                        <path
+                                            d="M13.0979 0H2.51865C2.021 0 1.61631 0.404688 1.61631 0.902344C1.61631 1.4 2.021 1.80469 2.51865 1.80469H10.9159L0.265527 12.4578C-0.087207 12.8105 -0.087207 13.382 0.265527 13.7348C0.618262 14.0875 1.18975 14.0875 1.54248 13.7348L12.1929 3.08164V11.4789C12.1929 11.9766 12.5976 12.3813 13.0952 12.3813C13.5929 12.3813 13.9976 11.9766 13.9976 11.4789V0.902344C14.0003 0.404688 13.5956 0 13.0979 0Z"
+                                            fill="white" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_22_1349">
+                                            <rect width="14" height="14" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                            </a>
+                        </div>
+                        <div class="techno__content_right">
+                            <div class="techno__block">
+                                <span>67 bln</span>
+                                <p>Blockchain market
+                                    worth by 2026</p>
+                            </div>
+                            <div class="techno__block">
+                                <span>86 %</span>
+                                <p>Expected industry
+                                    CAGR by 2030</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="partner__section">
+            <div class="container">
+                <h2 class="partner__title">Our partneships</h2>
+                <ul class="partner__list">
+                    <li class="partner__item">
+                        <img src="./img/partner1.png" alt="photo" loading="lazy">
+                    </li>
+                    <li class="partner__item">
+                        <img src="./img/partner2.png" alt="photo" loading="lazy">
+                    </li>
+                    <li class="partner__item">
+                        <img src="./img/partner3.png" alt="photo" loading="lazy">
+                    </li>
+                    <li class="partner__item">
+                        <img src="./img/partner4.png" alt="photo" loading="lazy">
+                    </li>
+                    <li class="partner__item">
+                        <img src="./img/partner5.png" alt="photo" loading="lazy">
+                    </li>
+                </ul>
+            </div>
+        </section>
+        <section class="blog__section">
+            <div class="container">
+                <h2 class="blog__title">Blog</h2>
+                <div class="swiper blog__swiper">
+                    <div class="swiper-wrapper blog__wrapper">
+                        <div class="swiper-slide blog__slide">
+
+                            <div class="blog__item">
+                                <img src="./img/blog1-1.png" alt="photo" loading="lazy">
+                                <h3>Avenga Contributes 1 Million Hryvnias for Okhmatdyt Hospital Reconstruction</h3>
+                                <p>Following the catastrophic missile attack on July 8, 2024, which inflicted
+                                    significant damage on Ukraine’s largest
+                                    children’s hospital, Okhmatdyt, Avenga has pledged a donation of 1,000,000 UAH to
+                                    aid in the urgent rebuilding efforts.</p>
+                                <a href="#">
+                                    <span class="header__link">Read more</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_20_962)">
+                                            <path
+                                                d="M11.227 0H2.15898C1.73242 0 1.38555 0.346875 1.38555 0.773438C1.38555 1.2 1.73242 1.54688 2.15898 1.54688H9.35664L0.227734 10.6781C-0.0746094 10.9805 -0.0746094 11.4703 0.227734 11.7727C0.530078 12.075 1.01992 12.075 1.32227 11.7727L10.4512 2.64141V9.83906C10.4512 10.2656 10.798 10.6125 11.2246 10.6125C11.6512 10.6125 11.998 10.2656 11.998 9.83906V0.773438C12.0004 0.346875 11.6535 0 11.227 0Z"
+                                                fill="#5646CC" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_20_962">
+                                                <rect width="12" height="12" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide blog__slide">
+                            <div class="blog__item">
+                                <img src="./img/blog1-2.png" alt="photo" loading="lazy">
+                                <h3>Conference Highlights: CollabDays, InfoShare, and MS Tech Summit</h3>
+                                <p>Catch up on the latest updates from the Microsoft 365 tech community, delve into the
+                                    future of LLMs and AI Agents, and
+                                    understand the implications of SharePoint Embedded’s general availability for
+                                    enterprises.</p>
+                                <a href="#">
+                                    <span class="header__link">Read more</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_20_962)">
+                                            <path
+                                                d="M11.227 0H2.15898C1.73242 0 1.38555 0.346875 1.38555 0.773438C1.38555 1.2 1.73242 1.54688 2.15898 1.54688H9.35664L0.227734 10.6781C-0.0746094 10.9805 -0.0746094 11.4703 0.227734 11.7727C0.530078 12.075 1.01992 12.075 1.32227 11.7727L10.4512 2.64141V9.83906C10.4512 10.2656 10.798 10.6125 11.2246 10.6125C11.6512 10.6125 11.998 10.2656 11.998 9.83906V0.773438C12.0004 0.346875 11.6535 0 11.227 0Z"
+                                                fill="#5646CC" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_20_962">
+                                                <rect width="12" height="12" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide blog__slide">
+                            <div class="blog__item">
+                                <img src="./img/blog1-3.png" alt="photo" loading="lazy">
+                                <h3>AI’s Impact on the Banking Sector</h3>
+                                <p>Explore how artificial intelligence is revolutionizing the banking industry by
+                                    modernizing financial services, enhancing
+                                    customer experiences, and fostering innovation.</p>
+                                <a href="#">
+                                    <span class="header__link">Read more</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_20_962)">
+                                            <path
+                                                d="M11.227 0H2.15898C1.73242 0 1.38555 0.346875 1.38555 0.773438C1.38555 1.2 1.73242 1.54688 2.15898 1.54688H9.35664L0.227734 10.6781C-0.0746094 10.9805 -0.0746094 11.4703 0.227734 11.7727C0.530078 12.075 1.01992 12.075 1.32227 11.7727L10.4512 2.64141V9.83906C10.4512 10.2656 10.798 10.6125 11.2246 10.6125C11.6512 10.6125 11.998 10.2656 11.998 9.83906V0.773438C12.0004 0.346875 11.6535 0 11.227 0Z"
+                                                fill="#5646CC" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_20_962">
+                                                <rect width="12" height="12" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide blog__slide">
+
+                            <div class="blog__item">
+                                <img src="./img/blog2-1.png" alt="photo" loading="lazy">
+                                <h3>Conference Highlights: CollabDays, InfoShare, and MS Tech Summit</h3>
+                                <p>Catch up on the latest updates from the Microsoft 365 tech community, delve into the
+                                    future of LLMs and AI Agents, and
+                                    understand the implications of SharePoint Embedded’s general availability for
+                                    enterprises.</p>
+                                <a href="#">
+                                    <span class="header__link">Read more</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_20_962)">
+                                            <path
+                                                d="M11.227 0H2.15898C1.73242 0 1.38555 0.346875 1.38555 0.773438C1.38555 1.2 1.73242 1.54688 2.15898 1.54688H9.35664L0.227734 10.6781C-0.0746094 10.9805 -0.0746094 11.4703 0.227734 11.7727C0.530078 12.075 1.01992 12.075 1.32227 11.7727L10.4512 2.64141V9.83906C10.4512 10.2656 10.798 10.6125 11.2246 10.6125C11.6512 10.6125 11.998 10.2656 11.998 9.83906V0.773438C12.0004 0.346875 11.6535 0 11.227 0Z"
+                                                fill="#5646CC" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_20_962">
+                                                <rect width="12" height="12" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide blog__slide">
+                            <div class="blog__item">
+                                <img src="./img/blog2-2.png" alt="photo" loading="lazy">
+                                <h3>AI’s Impact on the Banking Sector</h3>
+                                <p>Explore how artificial intelligence is revolutionizing the banking industry by
+                                    modernizing financial services, enhancing
+                                    customer experiences, and fostering innovation.</p>
+                                <a href="#">
+                                    <span class="header__link">Read more</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_20_962)">
+                                            <path
+                                                d="M11.227 0H2.15898C1.73242 0 1.38555 0.346875 1.38555 0.773438C1.38555 1.2 1.73242 1.54688 2.15898 1.54688H9.35664L0.227734 10.6781C-0.0746094 10.9805 -0.0746094 11.4703 0.227734 11.7727C0.530078 12.075 1.01992 12.075 1.32227 11.7727L10.4512 2.64141V9.83906C10.4512 10.2656 10.798 10.6125 11.2246 10.6125C11.6512 10.6125 11.998 10.2656 11.998 9.83906V0.773438C12.0004 0.346875 11.6535 0 11.227 0Z"
+                                                fill="#5646CC" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_20_962">
+                                                <rect width="12" height="12" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide blog__slide">
+                            <div class="blog__item">
+                                <img src="./img/blog2-3.png" alt="photo" loading="lazy">
+                                <h3>Custom App Development for Microsoft Teams</h3>
+                                <p>Uncover the potential of custom app development for Microsoft Teams and learn how to
+                                    build tailored applications to
+                                    enhance team functionality.</p>
+                                <a href="#">
+                                    <span class="header__link">Read more</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_20_962)">
+                                            <path
+                                                d="M11.227 0H2.15898C1.73242 0 1.38555 0.346875 1.38555 0.773438C1.38555 1.2 1.73242 1.54688 2.15898 1.54688H9.35664L0.227734 10.6781C-0.0746094 10.9805 -0.0746094 11.4703 0.227734 11.7727C0.530078 12.075 1.01992 12.075 1.32227 11.7727L10.4512 2.64141V9.83906C10.4512 10.2656 10.798 10.6125 11.2246 10.6125C11.6512 10.6125 11.998 10.2656 11.998 9.83906V0.773438C12.0004 0.346875 11.6535 0 11.227 0Z"
+                                                fill="#5646CC" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_20_962">
+                                                <rect width="12" height="12" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="swiper-slide blog__slide">
+
+                            <div class="blog__item">
+                                <img src="./img/blog2-2.png" alt="photo" loading="lazy">
+                                <h3>AI’s Impact on the Banking Sector</h3>
+                                <p>Explore how artificial intelligence is revolutionizing the banking industry by
+                                    modernizing financial services, enhancing
+                                    customer experiences, and fostering innovation.</p>
+                                <a href="#">
+                                    <span class="header__link">Read more</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_20_962)">
+                                            <path
+                                                d="M11.227 0H2.15898C1.73242 0 1.38555 0.346875 1.38555 0.773438C1.38555 1.2 1.73242 1.54688 2.15898 1.54688H9.35664L0.227734 10.6781C-0.0746094 10.9805 -0.0746094 11.4703 0.227734 11.7727C0.530078 12.075 1.01992 12.075 1.32227 11.7727L10.4512 2.64141V9.83906C10.4512 10.2656 10.798 10.6125 11.2246 10.6125C11.6512 10.6125 11.998 10.2656 11.998 9.83906V0.773438C12.0004 0.346875 11.6535 0 11.227 0Z"
+                                                fill="#5646CC" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_20_962">
+                                                <rect width="12" height="12" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide blog__slide">
+                            <div class="blog__item">
+                                <img src="./img/blog3-2.png" alt="photo" loading="lazy">
+                                <h3>Custom App Development for Microsoft Teams</h3>
+                                <p>Uncover the potential of custom app development for Microsoft Teams and learn how to
+                                    build tailored applications to
+                                    enhance team functionality.</p>
+                                <a href="#">
+                                    <span class="header__link">Read more</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_20_962)">
+                                            <path
+                                                d="M11.227 0H2.15898C1.73242 0 1.38555 0.346875 1.38555 0.773438C1.38555 1.2 1.73242 1.54688 2.15898 1.54688H9.35664L0.227734 10.6781C-0.0746094 10.9805 -0.0746094 11.4703 0.227734 11.7727C0.530078 12.075 1.01992 12.075 1.32227 11.7727L10.4512 2.64141V9.83906C10.4512 10.2656 10.798 10.6125 11.2246 10.6125C11.6512 10.6125 11.998 10.2656 11.998 9.83906V0.773438C12.0004 0.346875 11.6535 0 11.227 0Z"
+                                                fill="#5646CC" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_20_962">
+                                                <rect width="12" height="12" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide blog__slide">
+                            <div class="blog__item">
+                                <img src="./img/blog3-3.png" alt="photo" loading="lazy">
+                                <h3>Avenga Appoints New CEO: Ludovic Gaudé Succeeds Yuriy Adamchuk</h3>
+                                <p>Avenga, a leading global engineering and consulting platform, has announced Ludovic
+                                    Gaudé as its new CEO, succeeding
+                                    Yuriy Adamchuk.</p>
+                                <a href="#">
+                                    <span class="header__link">Read more</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
+                                        fill="none">
+                                        <g clip-path="url(#clip0_20_962)">
+                                            <path
+                                                d="M11.227 0H2.15898C1.73242 0 1.38555 0.346875 1.38555 0.773438C1.38555 1.2 1.73242 1.54688 2.15898 1.54688H9.35664L0.227734 10.6781C-0.0746094 10.9805 -0.0746094 11.4703 0.227734 11.7727C0.530078 12.075 1.01992 12.075 1.32227 11.7727L10.4512 2.64141V9.83906C10.4512 10.2656 10.798 10.6125 11.2246 10.6125C11.6512 10.6125 11.998 10.2656 11.998 9.83906V0.773438C12.0004 0.346875 11.6535 0 11.227 0Z"
+                                                fill="#5646CC" />
+                                        </g>
+                                        <defs>
+                                            <clipPath id="clip0_20_962">
+                                                <rect width="12" height="12" fill="white" />
+                                            </clipPath>
+                                        </defs>
+                                    </svg>
+                                </a>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="swiper__pagination">
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev custom-arrow"></div>
+                        <div class="swiper-button-next custom-arrow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="review__section">
+            <div class="container">
+                <h2 class="review__title">Reviews</h2>
+                <p class="review__subtitle">Avenga specializes in comprehensive IT transformation services, driving
+                    significant
+                    cost-efficiency through effective
+                    technology implementation.</p>
+                <div class="swiper review__swiper">
+                    <div class="swiper-wrapper review___wrapper">
+                        <div class="swiper-slide review__slide">
+
+
+                            <h3>R&D Services for a Legal Solutions Company</h3>
+                            <div class="star__box">
+                                <img src="./img/star.svg" alt="star">
+                                <img src="./img/star.svg" alt="star">
+                                <img src="./img/star.svg" alt="star">
+                                <img src="./img/star.svg" alt="star">
+                                <img src="./img/star.svg" alt="star">
+                            </div>
+                            <p>
+                                “Avenga's (formerly Core Value Inc) strength lies in their collaborative spirit and
+                                innovative approach." Avenga excels
+                                in developing state-of-the-art software with minimal supervision. Their disciplined
+                                team swiftly addresses any
+                                web-related challenges, showcasing their expertise.”
+                            </p>
+
+                        </div>
+                        <div class="swiper-slide review__slide">
+
+
+                            <h3>Engineering Staff Augmentation & Consulting for an IT Company</h3>
+                            <div class="star__box">
+                                <img src="./img/star.svg" alt="star">
+                                <img src="./img/star.svg" alt="star">
+                                <img src="./img/star.svg" alt="star">
+                                <img src="./img/star.svg" alt="star">
+                                <img src="./img/star.svg" alt="star">
+                            </div>
+                            <p>
+                                "As trust developed, the team began making significant contributions across various
+                                areas." Avenga (formerly Perfectial)
+                                has provided staff who have become integral to the company’s IT operations,
+                                demonstrating a strong commitment to
+                                supporting the client's needs.”
+                            </p>
+
+
+                        </div>
+                        <div class="swiper-slide review__slide">
+
+
+                            <h3>IT Consulting & Cloud Migration for a Telecom Company</h3>
+                            <div class="star__box">
+                                <img src="./img/star.svg" alt="star">
+                                <img src="./img/star.svg" alt="star">
+                                <img src="./img/star.svg" alt="star">
+                                <img src="./img/star.svg" alt="star">
+                                <img src="./img/star.svg" alt="star">
+                            </div>
+                            <p>
+                                "We were thoroughly impressed by the quality of service and IT expertise." Avenga
+                                successfully met all project
+                                expectations using an Agile methodology, delivering exceptional service and support
+                                throughout the engagement.”
+                            </p>
+
+                        </div>
+                        <div class="swiper-slide review__slide">
+
+
+                            <h3>Complete Salesforce Migration & Development for a Consulting Firm</h3>
+                            <div class="star__box">
+                                <img src="./img/star.svg" alt="star">
+                                <img src="./img/star.svg" alt="star">
+                                <img src="./img/star.svg" alt="star">
+                                <img src="./img/star.svg" alt="star">
+                                <img src="./img/star.svg" alt="star">
+                            </div>
+                            <p>
+                                "Whenever we express a new requirement, they grasp it immediately and handle it
+                                efficiently." Avenga (formerly Core
+                                Value Inc) demonstrated exceptional Salesforce expertise and thorough business
+                                analysis, leading to a successful
+                                transformation of workflows. Their agile approach to implementing new technologies
+                                ensures continuous improvement and
+                                adaptation.”
+                            </p>
+
+
+                        </div>
+                    </div>
+                    <div class="swiper__pagination">
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev custom-arrow"></div>
+                        <div class="swiper-button-next custom-arrow"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="faq__section">
+            <div class="container">
+                <h2 class="faq__title">Frequently Asked Questions</h2>
+                <ul class="faq__list">
+                    <li class="faq__item">
+                        <div class="faq__question">
+
+                            <h3>In addition to general IT strategy, do you offer specialized technology consulting for
+                                specific technologies or business
+                                functions?</h3>
+
+
+                            <span class="toggle-icon">
+                                <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                    viewBox="0 0 30 30" fill="none">
+                                    <g clip-path="url(#clip0_22_2089)">
+                                        <path
+                                            d="M28.8281 13.8281H16.1719V1.17188C16.1719 0.524648 15.6472 0 15 0C14.3528 0 13.8281 0.524648 13.8281 1.17188V13.8281H1.17188C0.524648 13.8281 0 14.3528 0 15C0 15.6472 0.524648 16.1719 1.17188 16.1719H13.8281V28.8281C13.8281 29.4754 14.3528 30 15 30C15.6472 30 16.1719 29.4754 16.1719 28.8281V16.1719H28.8281C29.4754 16.1719 30 15.6472 30 15C30 14.3528 29.4754 13.8281 28.8281 13.8281Z"
+                                            fill="#1E1E1E" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_22_2089">
+                                            <rect width="30" height="30" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg class="minus-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                    viewBox="0 0 30 30" fill="none">
+                                    <path
+                                        d="M13.8281 13.8281H28.8281C29.4754 13.8281 30 14.3528 30 15C30 15.6472 29.4754 16.1719 28.8281 16.1719H16.1719H1.17188C0.524648 16.1719 0 15.6472 0 15C0 14.3528 0.524648 13.8281 1.17188 13.8281H13.8281Z"
+                                        fill="#1E1E1E" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="faq__answer" style="display:none;">Absolutely. We provide a variety of specialized
+                            consulting services, including SAAS, data science, cloud, IoT, and
+                            cybersecurity consulting. Contact us to discover how we can address your unique needs.</div>
+                    </li>
+                    <li class="faq__item">
+                        <div class="faq__question">
+                            <h3>Which industries does Avenga serve?</h3>
+                            <span class="toggle-icon">
+                                <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                    viewBox="0 0 30 30" fill="none">
+                                    <g clip-path="url(#clip0_22_2089)">
+                                        <path
+                                            d="M28.8281 13.8281H16.1719V1.17188C16.1719 0.524648 15.6472 0 15 0C14.3528 0 13.8281 0.524648 13.8281 1.17188V13.8281H1.17188C0.524648 13.8281 0 14.3528 0 15C0 15.6472 0.524648 16.1719 1.17188 16.1719H13.8281V28.8281C13.8281 29.4754 14.3528 30 15 30C15.6472 30 16.1719 29.4754 16.1719 28.8281V16.1719H28.8281C29.4754 16.1719 30 15.6472 30 15C30 14.3528 29.4754 13.8281 28.8281 13.8281Z"
+                                            fill="#1E1E1E" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_22_2089">
+                                            <rect width="30" height="30" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg class="minus-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                    viewBox="0 0 30 30" fill="none">
+                                    <path
+                                        d="M13.8281 13.8281H28.8281C29.4754 13.8281 30 14.3528 30 15C30 15.6472 29.4754 16.1719 28.8281 16.1719H16.1719H1.17188C0.524648 16.1719 0 15.6472 0 15C0 14.3528 0.524648 13.8281 1.17188 13.8281H13.8281Z"
+                                        fill="#1E1E1E" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="faq__answer" style="display:none;">We have extensive experience working with
+                            companies
+                            across various sectors, including banking, automotive, healthcare,
+                            media and communications, education, manufacturing, consumer goods, retail, logistics,
+                            transportation, insurance, and
+                            more.</div>
+                    </li>
+                    <li class="faq__item">
+                        <div class="faq__question">
+
+                            <h3>How do you evaluate the performance of your IT consulting services?</h3>
+
+
+                            <span class="toggle-icon">
+                                <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                    viewBox="0 0 30 30" fill="none">
+                                    <g clip-path="url(#clip0_22_2089)">
+                                        <path
+                                            d="M28.8281 13.8281H16.1719V1.17188C16.1719 0.524648 15.6472 0 15 0C14.3528 0 13.8281 0.524648 13.8281 1.17188V13.8281H1.17188C0.524648 13.8281 0 14.3528 0 15C0 15.6472 0.524648 16.1719 1.17188 16.1719H13.8281V28.8281C13.8281 29.4754 14.3528 30 15 30C15.6472 30 16.1719 29.4754 16.1719 28.8281V16.1719H28.8281C29.4754 16.1719 30 15.6472 30 15C30 14.3528 29.4754 13.8281 28.8281 13.8281Z"
+                                            fill="#1E1E1E" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_22_2089">
+                                            <rect width="30" height="30" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg class="minus-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                    viewBox="0 0 30 30" fill="none">
+                                    <path
+                                        d="M13.8281 13.8281H28.8281C29.4754 13.8281 30 14.3528 30 15C30 15.6472 29.4754 16.1719 28.8281 16.1719H16.1719H1.17188C0.524648 16.1719 0 15.6472 0 15C0 14.3528 0.524648 13.8281 1.17188 13.8281H13.8281Z"
+                                        fill="#1E1E1E" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="faq__answer" style="display:none;">We tailor our services around KPIs that we
+                            develop in
+                            collaboration with our clients. These metrics can be
+                            business-focused (like return on assets and sales) or IT-focused (such as MTTR, system
+                            availability, and operating
+                            costs).</div>
+                    </li>
+                    <li class="faq__item">
+                        <div class="faq__question">
+
+                            <h3>Do Avenga’s technology consultants provide financial and strategic advice?</h3>
+
+
+                            <span class="toggle-icon">
+                                <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                    viewBox="0 0 30 30" fill="none">
+                                    <g clip-path="url(#clip0_22_2089)">
+                                        <path
+                                            d="M28.8281 13.8281H16.1719V1.17188C16.1719 0.524648 15.6472 0 15 0C14.3528 0 13.8281 0.524648 13.8281 1.17188V13.8281H1.17188C0.524648 13.8281 0 14.3528 0 15C0 15.6472 0.524648 16.1719 1.17188 16.1719H13.8281V28.8281C13.8281 29.4754 14.3528 30 15 30C15.6472 30 16.1719 29.4754 16.1719 28.8281V16.1719H28.8281C29.4754 16.1719 30 15.6472 30 15C30 14.3528 29.4754 13.8281 28.8281 13.8281Z"
+                                            fill="#1E1E1E" />
+                                    </g>
+                                    <defs>
+                                        <clipPath id="clip0_22_2089">
+                                            <rect width="30" height="30" fill="white" />
+                                        </clipPath>
+                                    </defs>
+                                </svg>
+                                <svg class="minus-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
+                                    viewBox="0 0 30 30" fill="none">
+                                    <path
+                                        d="M13.8281 13.8281H28.8281C29.4754 13.8281 30 14.3528 30 15C30 15.6472 29.4754 16.1719 28.8281 16.1719H16.1719H1.17188C0.524648 16.1719 0 15.6472 0 15C0 14.3528 0.524648 13.8281 1.17188 13.8281H13.8281Z"
+                                        fill="#1E1E1E" />
+                                </svg>
+                            </span>
+                        </div>
+                        <div class="faq__answer" style="display:none;">Yes, we offer comprehensive services that include
+                            designing custom software platforms, optimizing infrastructures,
+                            mitigating security risks, and identifying optimal technology investment strategies.
+                            Additionally, we provide advice on
+                            cost-effective integration of new software across different departments.</div>
+                    </li>
+
+                </ul>
+            </div>
+        </section>
+        <section class="form__section" id="form__section">
+            <div class="container">
+                <h2 class="form__title">Ready to innovate in your business?</h2>
+                <p class="form__subtitle">We! Let's start our path to success!</p>
+                <form action="#" id="form" class="form">
+
+                    <input type="text" id="name" name="name" placeholder="Full name">
+                    <input type="email" id="email" name="email" placeholder="Email address*">
+                    <input type="tel" id="phone" name="phone" placeholder="Phone number*" maxlength="12">
+                    <input type="text" id="message" name="message" placeholder="Message*">
+
+                    <div class="checkbox">
+                        <input type="checkbox" id="agreement" name="agreement">
+                        <label for="agreement">Yes, I have read and agree to the Data Privacy and
+                            Legal
+                            Notice.</label>
+                    </div>
+
+                    <button type="submit">
+                        <span>Send</span>
                         <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                            <g clip-path="url(#clip0_15_918)">
+                            <g clip-path="url(#clip0_22_2190)">
                                 <path
                                     d="M13.0979 0H2.51865C2.021 0 1.61631 0.404688 1.61631 0.902344C1.61631 1.4 2.021 1.80469 2.51865 1.80469H10.9159L0.265527 12.4578C-0.087207 12.8105 -0.087207 13.382 0.265527 13.7348C0.618262 14.0875 1.18975 14.0875 1.54248 13.7348L12.1929 3.08164V11.4789C12.1929 11.9766 12.5976 12.3813 13.0952 12.3813C13.5929 12.3813 13.9976 11.9766 13.9976 11.4789V0.902344C14.0003 0.404688 13.5956 0 13.0979 0Z"
                                     fill="white" />
                             </g>
                             <defs>
-                                <clipPath id="clip0_15_918">
+                                <clipPath id="clip0_22_2190">
                                     <rect width="14" height="14" fill="white" />
                                 </clipPath>
                             </defs>
                         </svg>
-                    </a>
-                </div>
-                <div class="hero__rigth">
-                    <img src="./img/hero-img.png" alt="photo" loading="lazy">
-                </div>
-
+                    </button>
+                </form>
             </div>
-        </div>
-    </section>
-    <section class="company__section">
+        </section>
+    </main>
+    <footer>
         <div class="container">
-            <ul class="company__list">
-                <li class="company__item">
-                    <img src="./img/company1.png" alt="logo company" loading="lazy">
-                </li>
-                <li class="company__item">
-                    <img src="./img/company2.png" alt="logo company" loading="lazy">
-                </li>
-                <li class="company__item">
-                    <img src="./img/company3.png" alt="logo company" loading="lazy">
-                </li>
-                <li class="company__item">
-                    <img src="./img/company4.png" alt="logo company" loading="lazy">
-                </li>
-                <li class="company__item">
-                    <img src="./img/company5.png" alt="logo company" loading="lazy">
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="section__service">
-        <div class="container">
-            <ul class="service__list">
-                <li class="service__item">
-                    <img src="./img/service1.png" alt="photo" loading="lazy">
-                    <span>Financial services & banking</span>
-                    <h3>Bespoke Cloud Architecture Design</h3>
-                    <p>Innovative cloud solutions that transform the case management experience for teams.</p>
-                    <a href="#">
-                        <span class="header__link">Read more</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                            <g clip-path="url(#clip0_20_962)">
-                                <path
-                                    d="M11.227 0H2.15898C1.73242 0 1.38555 0.346875 1.38555 0.773438C1.38555 1.2 1.73242 1.54688 2.15898 1.54688H9.35664L0.227734 10.6781C-0.0746094 10.9805 -0.0746094 11.4703 0.227734 11.7727C0.530078 12.075 1.01992 12.075 1.32227 11.7727L10.4512 2.64141V9.83906C10.4512 10.2656 10.798 10.6125 11.2246 10.6125C11.6512 10.6125 11.998 10.2656 11.998 9.83906V0.773438C12.0004 0.346875 11.6535 0 11.227 0Z"
-                                    fill="#5646CC" />
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_20_962">
-                                    <rect width="12" height="12" fill="white" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </a>
-                </li>
-                <li class="service__item">
-                    <img src="./img/service2.png" alt="photo" loading="lazy">
-                    <span>ML & Al</span>
-                    <h3>Al assistant for increased productivity in the workplace</h3>
-                    <p>Collaborating on a custom UMA platform enables a business to evolve a traditional workspace into
-                        a smart, collaborative
-                        environment.</p>
-                    <a href="#">
-                        <span class="header__link">Read more</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                            <g clip-path="url(#clip0_20_962)">
-                                <path
-                                    d="M11.227 0H2.15898C1.73242 0 1.38555 0.346875 1.38555 0.773438C1.38555 1.2 1.73242 1.54688 2.15898 1.54688H9.35664L0.227734 10.6781C-0.0746094 10.9805 -0.0746094 11.4703 0.227734 11.7727C0.530078 12.075 1.01992 12.075 1.32227 11.7727L10.4512 2.64141V9.83906C10.4512 10.2656 10.798 10.6125 11.2246 10.6125C11.6512 10.6125 11.998 10.2656 11.998 9.83906V0.773438C12.0004 0.346875 11.6535 0 11.227 0Z"
-                                    fill="#5646CC" />
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_20_962">
-                                    <rect width="12" height="12" fill="white" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </a>
-                </li>
-                <li class="service__item">
-                    <img src="./img/service1.png" alt="photo" loading="lazy">
-                    <span>Technology</span>
-                    <h3>Intuitive SaaS purchasing management platform</h3>
-                    <p>Transforming the purchasing experience by making the buying process as automated and streamlined
-                        as possible.</p>
-                    <a href="#">
-                        <span class="header__link">Read more</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                            <g clip-path="url(#clip0_20_962)">
-                                <path
-                                    d="M11.227 0H2.15898C1.73242 0 1.38555 0.346875 1.38555 0.773438C1.38555 1.2 1.73242 1.54688 2.15898 1.54688H9.35664L0.227734 10.6781C-0.0746094 10.9805 -0.0746094 11.4703 0.227734 11.7727C0.530078 12.075 1.01992 12.075 1.32227 11.7727L10.4512 2.64141V9.83906C10.4512 10.2656 10.798 10.6125 11.2246 10.6125C11.6512 10.6125 11.998 10.2656 11.998 9.83906V0.773438C12.0004 0.346875 11.6535 0 11.227 0Z"
-                                    fill="#5646CC" />
-                            </g>
-                            <defs>
-                                <clipPath id="clip0_20_962">
-                                    <rect width="12" height="12" fill="white" />
-                                </clipPath>
-                            </defs>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="section__howwework">
-        <div class="container">
-            <h2 class="howwework__title"> How we work</h2>
-            <p class="howwework__subtitle">We merge top-tier service delivery standards with unparalleled levels of
-                solution customization.</p>
-            <div class="howwework__list">
-                <div class="howwework__item">
-                    <span>1 step</span>
-                    <h3>Contact Us</h3>
-                    <p>Reach out via email or schedule a meeting. We'll reply within two hours to set up a
-                        convenient
-                        appointment.</p>
-                </div>
-                <div class="howwework__step step1">
-                    <p>1 working day</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="245" height="32" viewBox="0 0 245 32" fill="none">
-                        <rect width="2" height="30" fill="#5646CC" />
-                        <rect y="32" width="2" height="245" transform="rotate(-90 0 32)" fill="#5646CC" />
-                        <rect x="243" width="2" height="30" fill="#5646CC" />
-                    </svg>
-                </div>
-                <div class="howwework__item">
-                    <span>2 step</span>
-                    <h3>Consult with Our Specialist</h3>
-                    <p>A market expert tailored to your industry will connect to discuss your needs and outline the
-                        next steps.</p>
-                </div>
-                <div class="howwework__step step2">
-                    <p>up to 7 working days</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="245" height="32" viewBox="0 0 245 32" fill="none">
-                        <rect width="2" height="30" fill="#5646CC" />
-                        <rect y="32" width="2" height="245" transform="rotate(-90 0 32)" fill="#5646CC" />
-                        <rect x="243" width="2" height="30" fill="#5646CC" />
-                    </svg>
-                </div>
-                <div class="howwework__item">
-                    <span>3 step</span>
-                    <h3>Review Our Proposal</h3>
-                    <p>Receive a detailed service proposal with timelines and cost estimates for each phase of your
-                        project.</p>
-                </div>
-                <div class="howwework__item">
-                    <span>4 step</span>
-                    <h3>Finalize the Agreement</h3>
-                    <p>Once you sign the contract, we’ll begin work and keep you informed of our progress.</p>
-                </div>
-                <div class="howwework__step step3">
+            <div class="footer">
+                <div class="footer__top">
+                    <img src="./img/logo__footer.png" alt="logo">
+                    <ul class="header__list">
+                        <li class="header__item">
+                            <a href="./index.html" class="header__link">Home</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="./index.html" class="header__link">Industries</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="./index.html" class="header__link">Services</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="./index.html" class="header__link">Technologies</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="./index.html" class="header__link">Success</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="./index.html" class="header__link">About</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="./index.html" class="header__link">Insights</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="./index.html" class="header__link">Career</a>
+                        </li>
+                        <li class="header__item">
+                            <a href="./index.html" class="header__link">Contact us</a>
+                        </li>
+                    </ul>
 
-                    <p>7+ working days</p>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="245" height="32" viewBox="0 0 245 32" fill="none">
-                        <rect width="2" height="30" fill="#5646CC" />
-                        <rect y="32" width="2" height="245" transform="rotate(-90 0 32)" fill="#5646CC" />
-                        <rect x="243" width="2" height="30" fill="#5646CC" />
-                    </svg>
-
+                </div>
+                <div class="footer__bottom">
+                    <p class="footer__bot_item">© 2024 Avenga. All rights reserved.</p>
+                    <a class="footer__bot_item header__link" href="./privacy.html">Privacy Policy</a>
                 </div>
             </div>
         </div>
-        <img class="howwework__back" src="./img/howwework_back.png" alt="photo">
-    </section>
-    <section class="whatwedo__section">
-        <div class="container">
-            <div class="whatwedo__container">
-                <div class="whatwedo_left">
-                    <h2 class="whatwedo__title">What We Do</h2>
-                    <p class="whatwedo__subtitle">Avenga specializes in comprehensive IT transformation services,
-                        driving significant cost-efficiency through effective
-                        technology implementation.</p>
-                    <div class="swiper whatwedo__swiper">
-                        <div class="swiper-wrapper whatwedo__wrapper">
-                            <div class="swiper-slide whatwedo__slide">
-                                <h3 class="whatwedo__slide_title">Technology Solution Discovery</h3>
-                                <p class="whatwedo__slide_subtitle">Transform your business idea into a well-executed
-                                    project. After thorough analysis and validation of your concept, we
-                                    will identify a tailored technology suite that aligns with your business objectives.
-                                    From the start, we ensure
-                                    cost-efficiency, exceptional quality, and technical excellence.</p>
-                            </div>
-                            <div class="swiper-slide whatwedo__slide">
-                                <h3 class="whatwedo__slide_title">Solution audit</h3>
-                                <p class="whatwedo__slide_subtitle">An underperforming solution is more of a liability
-                                    than an asset. Discover what's hindering your software with our
-                                    solution audit services. Our experts will thoroughly evaluate your system and
-                                    provide a detailed report of issues
-                                    affecting its performance.</p>
-                            </div>
-                            <div class="swiper-slide whatwedo__slide">
-                                <h3 class="whatwedo__slide_title">Modernization discovery</h3>
-                                <p class="whatwedo__slide_subtitle">Staying competitive requires moving beyond legacy
-                                    platforms. We'll thoroughly analyze your current system to identify
-                                    areas for improvement and modernization. Additionally, we'll offer recommendations
-                                    for implementing these changes
-                                    efficiently and with minimal disruption to your business.</p>
-                            </div>
-                            <div class="swiper-slide whatwedo__slide">
-                                <h3 class="whatwedo__slide_title">Migration discovery</h3>
-                                <p class="whatwedo__slide_subtitle">An outdated infrastructure can hold back your
-                                    business performance. Upgrade to a modern, secure environment with our
-                                    consulting services. Avenga's experts will evaluate your app’s readiness for
-                                    migration and create a detailed plan to
-                                    ensure a smooth, predictable transition with minimal downtime.</p>
-                            </div>
-                            <div class="swiper-slide whatwedo__slide">
-                                <h3 class="whatwedo__slide_title">Capability enablement</h3>
-                                <p class="whatwedo__slide_subtitle">If your delivery system is missing certain essential
-                                    components, we can seamlessly and efficiently integrate them into
-                                    your ecosystem. Avenga helps companies provide the solutions their clients need by
-                                    ensuring smooth operation throughout
-                                    the entire software development lifecycle.</p>
-                            </div>
-                        </div>
-                        <div class="swiper__pagination">
-                            <div class="swiper-pagination"></div>
-                            <div class="swiper-button-prev custom-arrow"></div>
-                            <div class="swiper-button-next custom-arrow"></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="whatwedo_rigth">
-                    <img src="./img/whatwedo_img.png" alt="photo" loading="lazy">
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="offers__section">
-        <div class="container">
-            <h2 class="offers__title">Opting for Avenga offers:</h2>
-            <p class="offers__subtitle">Avenga specializes in comprehensive IT transformation services, driving
-                significant cost-efficiency through effective
-                technology implementation.</p>
-            <ul class="offers__list">
-                <li class="offers__item">
-                    <span>01</span>
-                    <h3>Boosted Performance</h3>
-                    <p>Achieve significant improvements in operational efficiency by gaining comprehensive insights into
-                        your assets and
-                        conditions.</p>
-                </li>
-                <li class="offers__item">
-                    <span>02</span>
-                    <h3>Proactive Maintenance</h3>
-                    <p>Utilize operational data to foresee potential issues and maintain stability across your
-                        operations.</p>
-                </li>
-                <li class="offers__item">
-                    <span>03</span>
-                    <h3>Enhanced Flexibility</h3>
-                    <p>Leverage real-time IoT data to develop new services like dynamic scheduling and routing, tailored
-                        to your needs.</p>
-                </li>
-                <li class="offers__item">
-                    <span>04</span>
-                    <h3>Process Refinement</h3>
-                    <p>Utilize real-time reporting to streamline processes and resolve operational inefficiencies.</p>
-                </li>
-                <li class="offers__item">
-                    <span>05</span>
-                    <h3>Innovative Business Models</h3>
-                    <p>Extract valuable insights from sensor data to uncover new opportunities and create modern,
-                        actionable business models.</p>
-                </li>
-                <li class="offers__item">
-                    <span>06</span>
-                    <h3>Forward-Thinking Solutions</h3>
-                    <p>Develop cutting-edge, connected products and deliver more personalized, engaging experiences for
-                        your clients.</p>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="techno__service">
-        <div class="container">
-            <h2 class="techno__title">Technologies</h2>
-            <div class="techno__container">
-                <ul class="techno__list">
-                    <li class="techno__tab techno__tab--active" data-tab="cloud">Cloud</li>
-                    <li class="techno__tab" data-tab="automation">Automation</li>
-                    <li class="techno__tab" data-tab="data-ai">Data and AI</li>
-                    <li class="techno__tab" data-tab="salesforce">Salesforce</li>
-                    <li class="techno__tab" data-tab="microsoft">Microsoft</li>
-                    <li class="techno__tab" data-tab="blockchain">Blockchain</li>
-                </ul>
-                <div class="techno__content active" id="cloud">
-                    <div class="techno__content_left">
-                        <p>Our team of certified AWS, Google Cloud, and Azure professionals is prepared to provide
-                            expert consulting, migration,
-                            and engineering services. Avenga delivers a comprehensive range of cloud solutions designed
-                            to enhance speed,
-                            reliability, and security for your needs.</p>
-                        <a href="#">
-                            <span>Explore</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
-                                fill="none">
-                                <g clip-path="url(#clip0_22_1349)">
-                                    <path
-                                        d="M13.0979 0H2.51865C2.021 0 1.61631 0.404688 1.61631 0.902344C1.61631 1.4 2.021 1.80469 2.51865 1.80469H10.9159L0.265527 12.4578C-0.087207 12.8105 -0.087207 13.382 0.265527 13.7348C0.618262 14.0875 1.18975 14.0875 1.54248 13.7348L12.1929 3.08164V11.4789C12.1929 11.9766 12.5976 12.3813 13.0952 12.3813C13.5929 12.3813 13.9976 11.9766 13.9976 11.4789V0.902344C14.0003 0.404688 13.5956 0 13.0979 0Z"
-                                        fill="white" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_22_1349">
-                                        <rect width="14" height="14" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="techno__content_right">
-                        <div class="techno__block">
-                            <span>35 %</span>
-                            <p>Total cost of
-                                ownership savings</p>
-                        </div>
-                        <div class="techno__block">
-                            <span>1 trillion</span>
-                            <p>Cloud computing market
-                                value by 2028</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="techno__content" id="automation">
-                    <div class="techno__content_left">
-                        <p>Fortify your products and services against business disruptions. Gain a competitive edge by
-                            automating delivery
-                            pipelines, testing, and manual processes to scale opportunities and mitigate risks
-                            seamlessly.</p>
-                        <a href="#">
-                            <span>Explore</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
-                                fill="none">
-                                <g clip-path="url(#clip0_22_1349)">
-                                    <path
-                                        d="M13.0979 0H2.51865C2.021 0 1.61631 0.404688 1.61631 0.902344C1.61631 1.4 2.021 1.80469 2.51865 1.80469H10.9159L0.265527 12.4578C-0.087207 12.8105 -0.087207 13.382 0.265527 13.7348C0.618262 14.0875 1.18975 14.0875 1.54248 13.7348L12.1929 3.08164V11.4789C12.1929 11.9766 12.5976 12.3813 13.0952 12.3813C13.5929 12.3813 13.9976 11.9766 13.9976 11.4789V0.902344C14.0003 0.404688 13.5956 0 13.0979 0Z"
-                                        fill="white" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_22_1349">
-                                        <rect width="14" height="14" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="techno__content_right">
-                        <div class="techno__block">
-                            <span>33 %</span>
-                            <p>More time to
-                                improve infrastructure</p>
-                        </div>
-                        <div class="techno__block">
-                            <span>60 %</span>
-                            <p>Less time for handling
-                                support cases</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="techno__content" id="data-ai">
-                    <div class="techno__content_left">
-                        <p>Harness the power of data to enhance decision-making, boost business agility, and enable
-                            accurate planning. Avenga
-                            supports businesses globally in collecting, processing, visualizing, and utilizing data to
-                            drive success.</p>
-                        <a href="#">
-                            <span>Explore</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
-                                fill="none">
-                                <g clip-path="url(#clip0_22_1349)">
-                                    <path
-                                        d="M13.0979 0H2.51865C2.021 0 1.61631 0.404688 1.61631 0.902344C1.61631 1.4 2.021 1.80469 2.51865 1.80469H10.9159L0.265527 12.4578C-0.087207 12.8105 -0.087207 13.382 0.265527 13.7348C0.618262 14.0875 1.18975 14.0875 1.54248 13.7348L12.1929 3.08164V11.4789C12.1929 11.9766 12.5976 12.3813 13.0952 12.3813C13.5929 12.3813 13.9976 11.9766 13.9976 11.4789V0.902344C14.0003 0.404688 13.5956 0 13.0979 0Z"
-                                        fill="white" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_22_1349">
-                                        <rect width="14" height="14" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="techno__content_right">
-                        <div class="techno__block">
-                            <span>95 %</span>
-                            <p>Businesses suffer from
-                                unstructured data</p>
-                        </div>
-                        <div class="techno__block">
-                            <span>82 %</span>
-                            <p>AI usage in risk
-                                management cases</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="techno__content" id="salesforce">
-                    <div class="techno__content_left">
-                        <p>Cultivate customer loyalty by delivering a unique buyer’s journey that sets you apart from
-                            competitors. As a certified
-                            Salesforce partner, Avenga offers bespoke Salesforce solutions to optimize sales and
-                            customer engagement.</p>
-                        <a href="#">
-                            <span>Explore</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
-                                fill="none">
-                                <g clip-path="url(#clip0_22_1349)">
-                                    <path
-                                        d="M13.0979 0H2.51865C2.021 0 1.61631 0.404688 1.61631 0.902344C1.61631 1.4 2.021 1.80469 2.51865 1.80469H10.9159L0.265527 12.4578C-0.087207 12.8105 -0.087207 13.382 0.265527 13.7348C0.618262 14.0875 1.18975 14.0875 1.54248 13.7348L12.1929 3.08164V11.4789C12.1929 11.9766 12.5976 12.3813 13.0952 12.3813C13.5929 12.3813 13.9976 11.9766 13.9976 11.4789V0.902344C14.0003 0.404688 13.5956 0 13.0979 0Z"
-                                        fill="white" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_22_1349">
-                                        <rect width="14" height="14" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="techno__content_right">
-                        <div class="techno__block">
-                            <span>52 %</span>
-                            <p>Increase of leads
-                                volume</p>
-                        </div>
-                        <div class="techno__block">
-                            <span>33 %</span>
-                            <p>CRM users
-                                worldwide</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="techno__content" id="microsoft">
-                    <div class="techno__content_left">
-                        <p>Optimize team productivity, coherence, and collaboration with Avenga’s tailored Microsoft
-                            solutions. Leverage Microsoft
-                            365, SharePoint Intranet, and Power Platform to ensure efficient goal-oriented cooperation
-                            across your organization.</p>
-                        <a href="#">
-                            <span>Explore</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
-                                fill="none">
-                                <g clip-path="url(#clip0_22_1349)">
-                                    <path
-                                        d="M13.0979 0H2.51865C2.021 0 1.61631 0.404688 1.61631 0.902344C1.61631 1.4 2.021 1.80469 2.51865 1.80469H10.9159L0.265527 12.4578C-0.087207 12.8105 -0.087207 13.382 0.265527 13.7348C0.618262 14.0875 1.18975 14.0875 1.54248 13.7348L12.1929 3.08164V11.4789C12.1929 11.9766 12.5976 12.3813 13.0952 12.3813C13.5929 12.3813 13.9976 11.9766 13.9976 11.4789V0.902344C14.0003 0.404688 13.5956 0 13.0979 0Z"
-                                        fill="white" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_22_1349">
-                                        <rect width="14" height="14" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="techno__content_right">
-                        <div class="techno__block">
-                            <span>91 %</span>
-                            <p>Used by Fortune
-                                100 companies</p>
-                        </div>
-                        <div class="techno__block">
-                            <span>79 %</span>
-                            <p>Healthcare organizations
-                                adopted Microsoft</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="techno__content" id="blockchain">
-                    <div class="techno__content_left">
-                        <p>Explore advanced digital security with blockchain technology. Our skilled blockchain
-                            developers at Avenga build
-                            decentralized solutions and applications to enhance transaction traceability and data
-                            security.</p>
-                        <a href="#">
-                            <span>Explore</span>
-                            <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14"
-                                fill="none">
-                                <g clip-path="url(#clip0_22_1349)">
-                                    <path
-                                        d="M13.0979 0H2.51865C2.021 0 1.61631 0.404688 1.61631 0.902344C1.61631 1.4 2.021 1.80469 2.51865 1.80469H10.9159L0.265527 12.4578C-0.087207 12.8105 -0.087207 13.382 0.265527 13.7348C0.618262 14.0875 1.18975 14.0875 1.54248 13.7348L12.1929 3.08164V11.4789C12.1929 11.9766 12.5976 12.3813 13.0952 12.3813C13.5929 12.3813 13.9976 11.9766 13.9976 11.4789V0.902344C14.0003 0.404688 13.5956 0 13.0979 0Z"
-                                        fill="white" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_22_1349">
-                                        <rect width="14" height="14" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                        </a>
-                    </div>
-                    <div class="techno__content_right">
-                        <div class="techno__block">
-                            <span>67 bln</span>
-                            <p>Blockchain market
-                                worth by 2026</p>
-                        </div>
-                        <div class="techno__block">
-                            <span>86 %</span>
-                            <p>Expected industry
-                                CAGR by 2030</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="partner__section">
-        <div class="container">
-            <h2 class="partner__title">Our partneships</h2>
-            <ul class="partner__list">
-                <li class="partner__item">
-                    <img src="./img/partner1.png" alt="photo" loading="lazy">
-                </li>
-                <li class="partner__item">
-                    <img src="./img/partner2.png" alt="photo" loading="lazy">
-                </li>
-                <li class="partner__item">
-                    <img src="./img/partner3.png" alt="photo" loading="lazy">
-                </li>
-                <li class="partner__item">
-                    <img src="./img/partner4.png" alt="photo" loading="lazy">
-                </li>
-                <li class="partner__item">
-                    <img src="./img/partner5.png" alt="photo" loading="lazy">
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="blog__section">
-        <div class="container">
-            <h2 class="blog__title">Blog</h2>
-            <div class="swiper blog__swiper">
-                <div class="swiper-wrapper blog__wrapper">
-                    <div class="swiper-slide blog__slide">
-
-                        <div class="blog__item">
-                            <img src="./img/blog1-1.png" alt="photo" loading="lazy">
-                            <h3>Avenga Contributes 1 Million Hryvnias for Okhmatdyt Hospital Reconstruction</h3>
-                            <p>Following the catastrophic missile attack on July 8, 2024, which inflicted
-                                significant damage on Ukraine’s largest
-                                children’s hospital, Okhmatdyt, Avenga has pledged a donation of 1,000,000 UAH to
-                                aid in the urgent rebuilding efforts.</p>
-                            <a href="#">
-                                <span class="header__link">Read more</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
-                                    fill="none">
-                                    <g clip-path="url(#clip0_20_962)">
-                                        <path
-                                            d="M11.227 0H2.15898C1.73242 0 1.38555 0.346875 1.38555 0.773438C1.38555 1.2 1.73242 1.54688 2.15898 1.54688H9.35664L0.227734 10.6781C-0.0746094 10.9805 -0.0746094 11.4703 0.227734 11.7727C0.530078 12.075 1.01992 12.075 1.32227 11.7727L10.4512 2.64141V9.83906C10.4512 10.2656 10.798 10.6125 11.2246 10.6125C11.6512 10.6125 11.998 10.2656 11.998 9.83906V0.773438C12.0004 0.346875 11.6535 0 11.227 0Z"
-                                            fill="#5646CC" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_20_962">
-                                            <rect width="12" height="12" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide blog__slide">
-                        <div class="blog__item">
-                            <img src="./img/blog1-2.png" alt="photo" loading="lazy">
-                            <h3>Conference Highlights: CollabDays, InfoShare, and MS Tech Summit</h3>
-                            <p>Catch up on the latest updates from the Microsoft 365 tech community, delve into the
-                                future of LLMs and AI Agents, and
-                                understand the implications of SharePoint Embedded’s general availability for
-                                enterprises.</p>
-                            <a href="#">
-                                <span class="header__link">Read more</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
-                                    fill="none">
-                                    <g clip-path="url(#clip0_20_962)">
-                                        <path
-                                            d="M11.227 0H2.15898C1.73242 0 1.38555 0.346875 1.38555 0.773438C1.38555 1.2 1.73242 1.54688 2.15898 1.54688H9.35664L0.227734 10.6781C-0.0746094 10.9805 -0.0746094 11.4703 0.227734 11.7727C0.530078 12.075 1.01992 12.075 1.32227 11.7727L10.4512 2.64141V9.83906C10.4512 10.2656 10.798 10.6125 11.2246 10.6125C11.6512 10.6125 11.998 10.2656 11.998 9.83906V0.773438C12.0004 0.346875 11.6535 0 11.227 0Z"
-                                            fill="#5646CC" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_20_962">
-                                            <rect width="12" height="12" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide blog__slide">
-                        <div class="blog__item">
-                            <img src="./img/blog1-3.png" alt="photo" loading="lazy">
-                            <h3>AI’s Impact on the Banking Sector</h3>
-                            <p>Explore how artificial intelligence is revolutionizing the banking industry by
-                                modernizing financial services, enhancing
-                                customer experiences, and fostering innovation.</p>
-                            <a href="#">
-                                <span class="header__link">Read more</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
-                                    fill="none">
-                                    <g clip-path="url(#clip0_20_962)">
-                                        <path
-                                            d="M11.227 0H2.15898C1.73242 0 1.38555 0.346875 1.38555 0.773438C1.38555 1.2 1.73242 1.54688 2.15898 1.54688H9.35664L0.227734 10.6781C-0.0746094 10.9805 -0.0746094 11.4703 0.227734 11.7727C0.530078 12.075 1.01992 12.075 1.32227 11.7727L10.4512 2.64141V9.83906C10.4512 10.2656 10.798 10.6125 11.2246 10.6125C11.6512 10.6125 11.998 10.2656 11.998 9.83906V0.773438C12.0004 0.346875 11.6535 0 11.227 0Z"
-                                            fill="#5646CC" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_20_962">
-                                            <rect width="12" height="12" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="swiper-slide blog__slide">
-
-                        <div class="blog__item">
-                            <img src="./img/blog2-1.png" alt="photo" loading="lazy">
-                            <h3>Conference Highlights: CollabDays, InfoShare, and MS Tech Summit</h3>
-                            <p>Catch up on the latest updates from the Microsoft 365 tech community, delve into the
-                                future of LLMs and AI Agents, and
-                                understand the implications of SharePoint Embedded’s general availability for
-                                enterprises.</p>
-                            <a href="#">
-                                <span class="header__link">Read more</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
-                                    fill="none">
-                                    <g clip-path="url(#clip0_20_962)">
-                                        <path
-                                            d="M11.227 0H2.15898C1.73242 0 1.38555 0.346875 1.38555 0.773438C1.38555 1.2 1.73242 1.54688 2.15898 1.54688H9.35664L0.227734 10.6781C-0.0746094 10.9805 -0.0746094 11.4703 0.227734 11.7727C0.530078 12.075 1.01992 12.075 1.32227 11.7727L10.4512 2.64141V9.83906C10.4512 10.2656 10.798 10.6125 11.2246 10.6125C11.6512 10.6125 11.998 10.2656 11.998 9.83906V0.773438C12.0004 0.346875 11.6535 0 11.227 0Z"
-                                            fill="#5646CC" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_20_962">
-                                            <rect width="12" height="12" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide blog__slide">
-                        <div class="blog__item">
-                            <img src="./img/blog2-2.png" alt="photo" loading="lazy">
-                            <h3>AI’s Impact on the Banking Sector</h3>
-                            <p>Explore how artificial intelligence is revolutionizing the banking industry by
-                                modernizing financial services, enhancing
-                                customer experiences, and fostering innovation.</p>
-                            <a href="#">
-                                <span class="header__link">Read more</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
-                                    fill="none">
-                                    <g clip-path="url(#clip0_20_962)">
-                                        <path
-                                            d="M11.227 0H2.15898C1.73242 0 1.38555 0.346875 1.38555 0.773438C1.38555 1.2 1.73242 1.54688 2.15898 1.54688H9.35664L0.227734 10.6781C-0.0746094 10.9805 -0.0746094 11.4703 0.227734 11.7727C0.530078 12.075 1.01992 12.075 1.32227 11.7727L10.4512 2.64141V9.83906C10.4512 10.2656 10.798 10.6125 11.2246 10.6125C11.6512 10.6125 11.998 10.2656 11.998 9.83906V0.773438C12.0004 0.346875 11.6535 0 11.227 0Z"
-                                            fill="#5646CC" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_20_962">
-                                            <rect width="12" height="12" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide blog__slide">
-                        <div class="blog__item">
-                            <img src="./img/blog2-3.png" alt="photo" loading="lazy">
-                            <h3>Custom App Development for Microsoft Teams</h3>
-                            <p>Uncover the potential of custom app development for Microsoft Teams and learn how to
-                                build tailored applications to
-                                enhance team functionality.</p>
-                            <a href="#">
-                                <span class="header__link">Read more</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
-                                    fill="none">
-                                    <g clip-path="url(#clip0_20_962)">
-                                        <path
-                                            d="M11.227 0H2.15898C1.73242 0 1.38555 0.346875 1.38555 0.773438C1.38555 1.2 1.73242 1.54688 2.15898 1.54688H9.35664L0.227734 10.6781C-0.0746094 10.9805 -0.0746094 11.4703 0.227734 11.7727C0.530078 12.075 1.01992 12.075 1.32227 11.7727L10.4512 2.64141V9.83906C10.4512 10.2656 10.798 10.6125 11.2246 10.6125C11.6512 10.6125 11.998 10.2656 11.998 9.83906V0.773438C12.0004 0.346875 11.6535 0 11.227 0Z"
-                                            fill="#5646CC" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_20_962">
-                                            <rect width="12" height="12" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="swiper-slide blog__slide">
-
-                        <div class="blog__item">
-                            <img src="./img/blog2-2.png" alt="photo" loading="lazy">
-                            <h3>AI’s Impact on the Banking Sector</h3>
-                            <p>Explore how artificial intelligence is revolutionizing the banking industry by
-                                modernizing financial services, enhancing
-                                customer experiences, and fostering innovation.</p>
-                            <a href="#">
-                                <span class="header__link">Read more</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
-                                    fill="none">
-                                    <g clip-path="url(#clip0_20_962)">
-                                        <path
-                                            d="M11.227 0H2.15898C1.73242 0 1.38555 0.346875 1.38555 0.773438C1.38555 1.2 1.73242 1.54688 2.15898 1.54688H9.35664L0.227734 10.6781C-0.0746094 10.9805 -0.0746094 11.4703 0.227734 11.7727C0.530078 12.075 1.01992 12.075 1.32227 11.7727L10.4512 2.64141V9.83906C10.4512 10.2656 10.798 10.6125 11.2246 10.6125C11.6512 10.6125 11.998 10.2656 11.998 9.83906V0.773438C12.0004 0.346875 11.6535 0 11.227 0Z"
-                                            fill="#5646CC" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_20_962">
-                                            <rect width="12" height="12" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide blog__slide">
-                        <div class="blog__item">
-                            <img src="./img/blog3-2.png" alt="photo" loading="lazy">
-                            <h3>Custom App Development for Microsoft Teams</h3>
-                            <p>Uncover the potential of custom app development for Microsoft Teams and learn how to
-                                build tailored applications to
-                                enhance team functionality.</p>
-                            <a href="#">
-                                <span class="header__link">Read more</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
-                                    fill="none">
-                                    <g clip-path="url(#clip0_20_962)">
-                                        <path
-                                            d="M11.227 0H2.15898C1.73242 0 1.38555 0.346875 1.38555 0.773438C1.38555 1.2 1.73242 1.54688 2.15898 1.54688H9.35664L0.227734 10.6781C-0.0746094 10.9805 -0.0746094 11.4703 0.227734 11.7727C0.530078 12.075 1.01992 12.075 1.32227 11.7727L10.4512 2.64141V9.83906C10.4512 10.2656 10.798 10.6125 11.2246 10.6125C11.6512 10.6125 11.998 10.2656 11.998 9.83906V0.773438C12.0004 0.346875 11.6535 0 11.227 0Z"
-                                            fill="#5646CC" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_20_962">
-                                            <rect width="12" height="12" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </a>
-                        </div>
-                    </div>
-                    <div class="swiper-slide blog__slide">
-                        <div class="blog__item">
-                            <img src="./img/blog3-3.png" alt="photo" loading="lazy">
-                            <h3>Avenga Appoints New CEO: Ludovic Gaudé Succeeds Yuriy Adamchuk</h3>
-                            <p>Avenga, a leading global engineering and consulting platform, has announced Ludovic
-                                Gaudé as its new CEO, succeeding
-                                Yuriy Adamchuk.</p>
-                            <a href="#">
-                                <span class="header__link">Read more</span>
-                                <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12"
-                                    fill="none">
-                                    <g clip-path="url(#clip0_20_962)">
-                                        <path
-                                            d="M11.227 0H2.15898C1.73242 0 1.38555 0.346875 1.38555 0.773438C1.38555 1.2 1.73242 1.54688 2.15898 1.54688H9.35664L0.227734 10.6781C-0.0746094 10.9805 -0.0746094 11.4703 0.227734 11.7727C0.530078 12.075 1.01992 12.075 1.32227 11.7727L10.4512 2.64141V9.83906C10.4512 10.2656 10.798 10.6125 11.2246 10.6125C11.6512 10.6125 11.998 10.2656 11.998 9.83906V0.773438C12.0004 0.346875 11.6535 0 11.227 0Z"
-                                            fill="#5646CC" />
-                                    </g>
-                                    <defs>
-                                        <clipPath id="clip0_20_962">
-                                            <rect width="12" height="12" fill="white" />
-                                        </clipPath>
-                                    </defs>
-                                </svg>
-                            </a>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="swiper__pagination">
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev custom-arrow"></div>
-                    <div class="swiper-button-next custom-arrow"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="review__section">
-        <div class="container">
-            <h2 class="review__title">Reviews</h2>
-            <p class="review__subtitle">Avenga specializes in comprehensive IT transformation services, driving
-                significant
-                cost-efficiency through effective
-                technology implementation.</p>
-            <div class="swiper review__swiper">
-                <div class="swiper-wrapper review___wrapper">
-                    <div class="swiper-slide review__slide">
-
-
-                        <h3>R&D Services for a Legal Solutions Company</h3>
-                        <div class="star__box">
-                            <img src="./img/star.svg" alt="star">
-                            <img src="./img/star.svg" alt="star">
-                            <img src="./img/star.svg" alt="star">
-                            <img src="./img/star.svg" alt="star">
-                            <img src="./img/star.svg" alt="star">
-                        </div>
-                        <p>
-                            “Avenga's (formerly Core Value Inc) strength lies in their collaborative spirit and
-                            innovative approach." Avenga excels
-                            in developing state-of-the-art software with minimal supervision. Their disciplined
-                            team swiftly addresses any
-                            web-related challenges, showcasing their expertise.”
-                        </p>
-
-                    </div>
-                    <div class="swiper-slide review__slide">
-
-
-                        <h3>Engineering Staff Augmentation & Consulting for an IT Company</h3>
-                        <div class="star__box">
-                            <img src="./img/star.svg" alt="star">
-                            <img src="./img/star.svg" alt="star">
-                            <img src="./img/star.svg" alt="star">
-                            <img src="./img/star.svg" alt="star">
-                            <img src="./img/star.svg" alt="star">
-                        </div>
-                        <p>
-                            "As trust developed, the team began making significant contributions across various
-                            areas." Avenga (formerly Perfectial)
-                            has provided staff who have become integral to the company’s IT operations,
-                            demonstrating a strong commitment to
-                            supporting the client's needs.”
-                        </p>
-
-
-                    </div>
-                    <div class="swiper-slide review__slide">
-
-
-                        <h3>IT Consulting & Cloud Migration for a Telecom Company</h3>
-                        <div class="star__box">
-                            <img src="./img/star.svg" alt="star">
-                            <img src="./img/star.svg" alt="star">
-                            <img src="./img/star.svg" alt="star">
-                            <img src="./img/star.svg" alt="star">
-                            <img src="./img/star.svg" alt="star">
-                        </div>
-                        <p>
-                            "We were thoroughly impressed by the quality of service and IT expertise." Avenga
-                            successfully met all project
-                            expectations using an Agile methodology, delivering exceptional service and support
-                            throughout the engagement.”
-                        </p>
-
-                    </div>
-                    <div class="swiper-slide review__slide">
-
-
-                        <h3>Complete Salesforce Migration & Development for a Consulting Firm</h3>
-                        <div class="star__box">
-                            <img src="./img/star.svg" alt="star">
-                            <img src="./img/star.svg" alt="star">
-                            <img src="./img/star.svg" alt="star">
-                            <img src="./img/star.svg" alt="star">
-                            <img src="./img/star.svg" alt="star">
-                        </div>
-                        <p>
-                            "Whenever we express a new requirement, they grasp it immediately and handle it
-                            efficiently." Avenga (formerly Core
-                            Value Inc) demonstrated exceptional Salesforce expertise and thorough business
-                            analysis, leading to a successful
-                            transformation of workflows. Their agile approach to implementing new technologies
-                            ensures continuous improvement and
-                            adaptation.”
-                        </p>
-
-
-                    </div>
-                </div>
-                <div class="swiper__pagination">
-                    <div class="swiper-pagination"></div>
-                    <div class="swiper-button-prev custom-arrow"></div>
-                    <div class="swiper-button-next custom-arrow"></div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section class="faq__section">
-        <div class="container">
-            <h2 class="faq__title">Frequently Asked Questions</h2>
-            <ul class="faq__list">
-                <li class="faq__item">
-                    <div class="faq__question">
-
-                        <h3>In addition to general IT strategy, do you offer specialized technology consulting for
-                            specific technologies or business
-                            functions?</h3>
-
-
-                        <span class="toggle-icon">
-                            <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                                viewBox="0 0 30 30" fill="none">
-                                <g clip-path="url(#clip0_22_2089)">
-                                    <path
-                                        d="M28.8281 13.8281H16.1719V1.17188C16.1719 0.524648 15.6472 0 15 0C14.3528 0 13.8281 0.524648 13.8281 1.17188V13.8281H1.17188C0.524648 13.8281 0 14.3528 0 15C0 15.6472 0.524648 16.1719 1.17188 16.1719H13.8281V28.8281C13.8281 29.4754 14.3528 30 15 30C15.6472 30 16.1719 29.4754 16.1719 28.8281V16.1719H28.8281C29.4754 16.1719 30 15.6472 30 15C30 14.3528 29.4754 13.8281 28.8281 13.8281Z"
-                                        fill="#1E1E1E" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_22_2089">
-                                        <rect width="30" height="30" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                            <svg class="minus-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                                viewBox="0 0 30 30" fill="none">
-                                <path
-                                    d="M13.8281 13.8281H28.8281C29.4754 13.8281 30 14.3528 30 15C30 15.6472 29.4754 16.1719 28.8281 16.1719H16.1719H1.17188C0.524648 16.1719 0 15.6472 0 15C0 14.3528 0.524648 13.8281 1.17188 13.8281H13.8281Z"
-                                    fill="#1E1E1E" />
-                            </svg>
-                        </span>
-                    </div>
-                    <div class="faq__answer" style="display:none;">Absolutely. We provide a variety of specialized
-                        consulting services, including SAAS, data science, cloud, IoT, and
-                        cybersecurity consulting. Contact us to discover how we can address your unique needs.</div>
-                </li>
-                <li class="faq__item">
-                    <div class="faq__question">
-                        <h3>Which industries does Avenga serve?</h3>
-                        <span class="toggle-icon">
-                            <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                                viewBox="0 0 30 30" fill="none">
-                                <g clip-path="url(#clip0_22_2089)">
-                                    <path
-                                        d="M28.8281 13.8281H16.1719V1.17188C16.1719 0.524648 15.6472 0 15 0C14.3528 0 13.8281 0.524648 13.8281 1.17188V13.8281H1.17188C0.524648 13.8281 0 14.3528 0 15C0 15.6472 0.524648 16.1719 1.17188 16.1719H13.8281V28.8281C13.8281 29.4754 14.3528 30 15 30C15.6472 30 16.1719 29.4754 16.1719 28.8281V16.1719H28.8281C29.4754 16.1719 30 15.6472 30 15C30 14.3528 29.4754 13.8281 28.8281 13.8281Z"
-                                        fill="#1E1E1E" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_22_2089">
-                                        <rect width="30" height="30" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                            <svg class="minus-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                                viewBox="0 0 30 30" fill="none">
-                                <path
-                                    d="M13.8281 13.8281H28.8281C29.4754 13.8281 30 14.3528 30 15C30 15.6472 29.4754 16.1719 28.8281 16.1719H16.1719H1.17188C0.524648 16.1719 0 15.6472 0 15C0 14.3528 0.524648 13.8281 1.17188 13.8281H13.8281Z"
-                                    fill="#1E1E1E" />
-                            </svg>
-                        </span>
-                    </div>
-                    <div class="faq__answer" style="display:none;">We have extensive experience working with companies
-                        across various sectors, including banking, automotive, healthcare,
-                        media and communications, education, manufacturing, consumer goods, retail, logistics,
-                        transportation, insurance, and
-                        more.</div>
-                </li>
-                <li class="faq__item">
-                    <div class="faq__question">
-
-                        <h3>How do you evaluate the performance of your IT consulting services?</h3>
-
-
-                        <span class="toggle-icon">
-                            <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                                viewBox="0 0 30 30" fill="none">
-                                <g clip-path="url(#clip0_22_2089)">
-                                    <path
-                                        d="M28.8281 13.8281H16.1719V1.17188C16.1719 0.524648 15.6472 0 15 0C14.3528 0 13.8281 0.524648 13.8281 1.17188V13.8281H1.17188C0.524648 13.8281 0 14.3528 0 15C0 15.6472 0.524648 16.1719 1.17188 16.1719H13.8281V28.8281C13.8281 29.4754 14.3528 30 15 30C15.6472 30 16.1719 29.4754 16.1719 28.8281V16.1719H28.8281C29.4754 16.1719 30 15.6472 30 15C30 14.3528 29.4754 13.8281 28.8281 13.8281Z"
-                                        fill="#1E1E1E" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_22_2089">
-                                        <rect width="30" height="30" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                            <svg class="minus-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                                viewBox="0 0 30 30" fill="none">
-                                <path
-                                    d="M13.8281 13.8281H28.8281C29.4754 13.8281 30 14.3528 30 15C30 15.6472 29.4754 16.1719 28.8281 16.1719H16.1719H1.17188C0.524648 16.1719 0 15.6472 0 15C0 14.3528 0.524648 13.8281 1.17188 13.8281H13.8281Z"
-                                    fill="#1E1E1E" />
-                            </svg>
-                        </span>
-                    </div>
-                    <div class="faq__answer" style="display:none;">We tailor our services around KPIs that we develop in
-                        collaboration with our clients. These metrics can be
-                        business-focused (like return on assets and sales) or IT-focused (such as MTTR, system
-                        availability, and operating
-                        costs).</div>
-                </li>
-                <li class="faq__item">
-                    <div class="faq__question">
-
-                        <h3>Do Avenga’s technology consultants provide financial and strategic advice?</h3>
-
-
-                        <span class="toggle-icon">
-                            <svg class="plus-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                                viewBox="0 0 30 30" fill="none">
-                                <g clip-path="url(#clip0_22_2089)">
-                                    <path
-                                        d="M28.8281 13.8281H16.1719V1.17188C16.1719 0.524648 15.6472 0 15 0C14.3528 0 13.8281 0.524648 13.8281 1.17188V13.8281H1.17188C0.524648 13.8281 0 14.3528 0 15C0 15.6472 0.524648 16.1719 1.17188 16.1719H13.8281V28.8281C13.8281 29.4754 14.3528 30 15 30C15.6472 30 16.1719 29.4754 16.1719 28.8281V16.1719H28.8281C29.4754 16.1719 30 15.6472 30 15C30 14.3528 29.4754 13.8281 28.8281 13.8281Z"
-                                        fill="#1E1E1E" />
-                                </g>
-                                <defs>
-                                    <clipPath id="clip0_22_2089">
-                                        <rect width="30" height="30" fill="white" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                            <svg class="minus-icon" xmlns="http://www.w3.org/2000/svg" width="30" height="30"
-                                viewBox="0 0 30 30" fill="none">
-                                <path
-                                    d="M13.8281 13.8281H28.8281C29.4754 13.8281 30 14.3528 30 15C30 15.6472 29.4754 16.1719 28.8281 16.1719H16.1719H1.17188C0.524648 16.1719 0 15.6472 0 15C0 14.3528 0.524648 13.8281 1.17188 13.8281H13.8281Z"
-                                    fill="#1E1E1E" />
-                            </svg>
-                        </span>
-                    </div>
-                    <div class="faq__answer" style="display:none;">Yes, we offer comprehensive services that include
-                        designing custom software platforms, optimizing infrastructures,
-                        mitigating security risks, and identifying optimal technology investment strategies.
-                        Additionally, we provide advice on
-                        cost-effective integration of new software across different departments.</div>
-                </li>
-
-            </ul>
-        </div>
-    </section>
-    <section class="form__section" id="form__section">
-        <div class="container">
-            <h2 class="form__title">Ready to innovate in your business?</h2>
-            <p class="form__subtitle">We! Let's start our path to success!</p>
-            <form action="#" id="form" class="form">
-
-                <input type="text" id="name" name="name" placeholder="Full name">
-                <input type="email" id="email" name="email" placeholder="Email address*">
-                <input type="tel" id="phone" name="phone" placeholder="Phone number*">
-                <input type="text" id="message" name="message" placeholder="Message*">
-
-                <div class="checkbox">
-                    <input type="checkbox" id="agreement" name="agreement">
-                    <label for="agreement">Yes, I have read and agree to the Data Privacy and
-                        Legal
-                        Notice.</label>
-                </div>
-
-                <button type="submit">
-                    <span>Send</span>
-                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none">
-                        <g clip-path="url(#clip0_22_2190)">
-                            <path
-                                d="M13.0979 0H2.51865C2.021 0 1.61631 0.404688 1.61631 0.902344C1.61631 1.4 2.021 1.80469 2.51865 1.80469H10.9159L0.265527 12.4578C-0.087207 12.8105 -0.087207 13.382 0.265527 13.7348C0.618262 14.0875 1.18975 14.0875 1.54248 13.7348L12.1929 3.08164V11.4789C12.1929 11.9766 12.5976 12.3813 13.0952 12.3813C13.5929 12.3813 13.9976 11.9766 13.9976 11.4789V0.902344C14.0003 0.404688 13.5956 0 13.0979 0Z"
-                                fill="white" />
-                        </g>
-                        <defs>
-                            <clipPath id="clip0_22_2190">
-                                <rect width="14" height="14" fill="white" />
-                            </clipPath>
-                        </defs>
-                    </svg>
-                </button>
-            </form>
-        </div>
-    </section>
-</main>
-<footer>
-    <div class="container">
-        <div class="footer">
-            <div class="footer__top">
-                <img src="./img/logo__footer.png" alt="logo">
-                <ul class="header__list">
-                    <li class="header__item">
-                        <a href="./index.html" class="header__link">Home</a>
-                    </li>
-                    <li class="header__item">
-                        <a href="./index.html" class="header__link">Industries</a>
-                    </li>
-                    <li class="header__item">
-                        <a href="./index.html" class="header__link">Services</a>
-                    </li>
-                    <li class="header__item">
-                        <a href="./index.html" class="header__link">Technologies</a>
-                    </li>
-                    <li class="header__item">
-                        <a href="./index.html" class="header__link">Success</a>
-                    </li>
-                    <li class="header__item">
-                        <a href="./index.html" class="header__link">About</a>
-                    </li>
-                    <li class="header__item">
-                        <a href="./index.html" class="header__link">Insights</a>
-                    </li>
-                    <li class="header__item">
-                        <a href="./index.html" class="header__link">Career</a>
-                    </li>
-                    <li class="header__item">
-                        <a href="./index.html" class="header__link">Contact us</a>
-                    </li>
-                </ul>
-
-            </div>
-            <div class="footer__bottom">
-                <p class="footer__bot_item">© 2024 Avenga. All rights reserved.</p>
-                <a class="footer__bot_item header__link" href="./privacy.index">Privacy Policy</a>
-            </div>
-        </div>
+    </footer>
+    <div class="popup" id="popup">
+        <h2 class=" popup__title">Welcome to Avenga!</h2>
+        <p class="popup__subtitle">This site employs cookies and similar technologies to collect device and personal
+            data.
+            This data processing serves
+            various purposes, including integrating content, external services, third-party elements, statistical
+            analysis,
+            and
+            social media features. Depending on the functionality, some data may be shared with third parties. Your
+            consent
+            is
+            optional and not necessary for using our website; you may choose to decline or withdraw it at any time. By
+            consenting,
+            you agree to the use of cookies across all Avenga International GmbH websites.</p>
+        <ul class="popup__list">
+            <li class="popup__item">
+                <button>Settings</button>
+            </li>
+            <li class="popup__item">
+                <button class="active__btn">Accept Everything</button>
+            </li>
+            <li class="popup__item">
+                <button>Reject All</button>
+            </li>
+        </ul>
+        <p class="popup__link" style="margin-bottom: 15px;">Legal Notice</p>
+        <p class="popup__link">Data protection notice</p>
     </div>
-</footer>
-<div class="popup" id="popup" style="display: none;">
-    <h2 class="popup__title">Welcome to Avenga!</h2>
-    <p class="popup__subtitle">This site employs cookies and similar technologies to collect device and personal data.
-        This data processing serves
-        various purposes, including integrating content, external services, third-party elements, statistical analysis,
-        and
-        social media features. Depending on the functionality, some data may be shared with third parties. Your consent
-        is
-        optional and not necessary for using our website; you may choose to decline or withdraw it at any time. By
-        consenting,
-        you agree to the use of cookies across all Avenga International GmbH websites.</p>
-    <ul class="popup__list">
-        <li class="popup__item">
-            <button>Settings</button>
-            <button class="active__btn">Accept Everything</button>
-            <button>Reject All</button>
-        </li>
-    </ul>
-    <p class="popup__link">Legal Notice</p>
-    <p class="popup__link">Data protection notice</p>
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-<script src="./js/index.js"></script>
+    <div class="overlay "></div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+    <script>
+        const iti = window.intlTelInput(document.getElementById('phone'), {
+            separateDialCode: true,
+            utilsScript: 'https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js',
+        });
+    </script>
+    <script src="./js/index.js"></script>
 
-<body>
+
 
 </body>
 
