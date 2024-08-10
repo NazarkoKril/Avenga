@@ -32,6 +32,7 @@ html {
 
 body {
   zoom: 1.4;
+  background-color: #fff;
 }
 
 .header__container {
@@ -1404,7 +1405,7 @@ input.valid {
   opacity: 0;
   transition: opacity 0.3s ease-in-out;
   pointer-events: none;
-  z-index: 9999;
+  z-index: 999999;
 }
 
 body.no-scroll {
